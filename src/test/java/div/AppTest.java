@@ -1,4 +1,4 @@
-package kladd;
+package div;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
