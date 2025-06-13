@@ -34,3 +34,5 @@ __pycache__/
 *.pyd
 *.pyw
 *.pyz
+
+.vscode/

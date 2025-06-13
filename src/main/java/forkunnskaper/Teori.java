@@ -1,4 +1,4 @@
-package teknikker.delegering;
+package forkunnskaper;
 
 public class Teori {
 
