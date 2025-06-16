@@ -4,44 +4,49 @@ public class Loops {
 
 	public static void main(String[] args) {
 
-		int alder = 21;
+		int poeng = 87;
+		boolean duSkrevAdressenTilSensorIBesvarelsen = true;
 
-		if (alder >= 18) {
-			System.out.println("Du er myndig!");
+		// Uten boolsk først, legg så til
+		if (poeng >= 90 || duSkrevAdressenTilSensorIBesvarelsen) {
+			System.out.println("Du får karakter A");
+		} else if (poeng >= 80) {
+			System.out.println("Du får karakter B");
+		} else if (poeng >= 70) {
+			System.out.println("Du får karakter C");
+		} else {
+			System.out.println("Du må øve mer");
 		}
+
 
 		for (int i = 10; i > 0; i--) {
 			System.out.println(i);
 		}
 
+		for (int i = 0; i < 10; i+=3) {
+			System.out.println(i);
+		}
+
+
 		int n = 0;
-		while (n <= 10) {
+		while (true) {
+			if (n > 10) {
+				break;
+			}
 			if (n % 2 == 0) {
 				System.out.println(n + " er partall");
 			}
 			n++;
 		}
 
-		int tallViLeterEtter = 5;
-		int maksTall = 10;
-		for (int i = 0; i < maksTall; i++) {
-			if (i != tallViLeterEtter) {
-				System.out.println("Ikke funnet ennå");
+
+		for (int i = 0; i < 10; i++) {
+			if (i % 2 == 0) {
 				continue;
 			}
-			System.out.println("JIPPI! Jeg fant");
-			break;
+			System.out.println(i + " er et oddetall");
 		}
 
-		boolean funnetTall = false;
-		int tallViUndersoker = 0;
-		while (!funnetTall) {
-			if (tallViUndersoker == tallViLeterEtter) {
-				System.out.println("Vi fant tallet " + tallViLeterEtter);
-				funnetTall = true;
-			}
-			tallViUndersoker++;
-		}
 
 	}
 

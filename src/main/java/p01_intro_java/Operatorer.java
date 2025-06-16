@@ -1,6 +1,6 @@
 package p01_intro_java;
 
-public class AritmetikkMedPrimitiveTyper {
+public class Operatorer {
 
 	public static void main(String[] args) {
 
@@ -19,8 +19,10 @@ public class AritmetikkMedPrimitiveTyper {
 
 		// Vi får så plutselig 4 appelsiner til
 		antallFrukt = antallFrukt + 1;
-		antallFrukt += 1;
-		antallFrukt -= 1;
+		antallFrukt += 4;
+		antallFrukt -= 4;
+		antallFrukt++;
+		antallFrukt--;
 		// antallFrukt *= 2;
 		// antallFrukt /= 2;
 		System.out.println("Antall epler, bananer og appelsiner: " + antallFrukt);
