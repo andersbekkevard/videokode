@@ -1,27 +1,28 @@
 package p01_intro_java;
 
 public class Arrays {
-    
+
     public static void main(String[] args) {
-        
 
-        // Med verdier direkte
-        int[] tall1 = {10, 20, 30, 40};
+        // To måter å opprette arrays på
 
-        // Eller tomt array med plass til 5 tall
-        int[] tall2 = new int[4];
-        tall2[0] = 10;
-        tall2[1] = 20;
-        tall2[2] = 30;
-        tall2[3] = 40;
+        // Tomt array med plass til 3 tall. Tallet inni klammeparentesene til høyre er
+        // størrelsen
+        int[] tall = new int[3];
+        tall[0] = 10;
+        tall[1] = 20;
 
-        System.out.println(tall2);
-        System.out.println("Tall 2: " + tall2[0] + ", " + tall2[1] + ", " + tall2[2] + ", " + tall2[3]);
+        // Med verdier direkte. Størrelse og verdier gitt ved opprettelse
+        int[] andreTall = { 10, 20, 30 };
 
+        System.out.println(tall); // Denne skriver bare ut hvor i minnet arrayen vår er, ikke hva den inneholder
+        // Må hente ut en og en verdi
+        System.out.println("Tall 2: " + tall[0] + ", " + tall[1] + ", " + tall[2]);
+        // Ser også her at siden vi ikke definerte tall[2] ble den satt til verdien 0
 
-        String[] navn = new String[2];
-        navn[0] = "Hans";
-        navn[1] = "Ola";
+        System.out.println(andreTall[4]);
+
+        String[] navn = { "Hans", "Ola" };
         System.out.println("Første navn i lista: " + navn[0]);
 
     }
