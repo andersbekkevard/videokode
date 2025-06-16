@@ -1,4 +1,3 @@
-
 alder = 21
 
 if alder >= 18:
@@ -29,3 +28,9 @@ while not funnet_tall:
         print(f"Vi fant tallet {tall_vi_leter_etter}")
         funnet_tall = True
     tall_vi_undersoker += 1
+
+x = 10
+if 6 < x < 12:
+    print("x er mellom 5 og 12")
+else:
+    print("x er ikke mellom 5 og 12")
