@@ -48,6 +48,12 @@ public class Loops {
 		}
 
 
-	}
+		int x = 10;
+		if (6 < x && x < 15) {
+			System.out.println("x er mellom 6 og 15");
+		} else {
+			System.out.println("x er ikke mellom 6 og 15");
+		}
 
+	}
 }
