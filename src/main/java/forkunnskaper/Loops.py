@@ -1,5 +1,9 @@
 
 alder = 21
+alder += 1
+alder -= 1
+alder == 21 # TRUE
+alder != 40 # TRUE
 
 if alder >= 18:
     print("Du er myndig!")

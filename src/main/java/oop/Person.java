@@ -20,7 +20,7 @@ public class Person {
     public static void main(String[] args) {
         Person p = new Person();
         p.setName("Hans");
-        p.setAge(21);
+        p.setAge(22);
         p.presenterDegSelv();
     }
 }

@@ -2,20 +2,18 @@ package oop;
 
 public class AvansertPerson {
     
-    String navn;
-    int alder;
+    String name;
+    int age;
 
-    AvansertPerson(String nyttNavn, int nyAlder) {
-        navn = nyttNavn;
-        alder = nyAlder;
-    }
-
-    void presenterDegSelv() {
-        System.out.println("Jeg heter " + navn + " og jeg er " + alder + " år gammel");
+    AvansertPerson(String newName, int newAge) {
+        name = newName;
+        age = newAge;
     }
 
     public static void main(String[] args) {
-        AvansertPerson p = new AvansertPerson("Hans", 22);
-        p.presenterDegSelv();
+        AvansertPerson person = new AvansertPerson("Hans", 22);
+        person.name = "Hanne";
+        person.age = 23;
+        System.out.println("Jeg heter " + person.name + " og jeg er " + person.age + " år gammel");
     }
 }
