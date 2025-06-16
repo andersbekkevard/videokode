@@ -9,15 +9,14 @@ public class Loops {
 
 		// Uten boolsk først, legg så til
 		if (poeng >= 90 || duSkrevAdressenTilSensorIBesvarelsen) {
-			System.out.println("Du får karakter A");
+			System.out.println("Karakter A");
 		} else if (poeng >= 80) {
-			System.out.println("Du får karakter B");
+			System.out.println("Karakter B");
 		} else if (poeng >= 70) {
-			System.out.println("Du får karakter C");
+			System.out.println("Karakter C");
 		} else {
 			System.out.println("Du må øve mer");
 		}
-
 
 		for (int i = 10; i > 0; i--) {
 			System.out.println(i);
@@ -26,7 +25,6 @@ public class Loops {
 		for (int i = 0; i < 10; i+=3) {
 			System.out.println(i);
 		}
-
 
 		int n = 0;
 		while (true) {
@@ -53,6 +51,13 @@ public class Loops {
 			System.out.println("x er mellom 6 og 15");
 		} else {
 			System.out.println("x er ikke mellom 6 og 15");
+		}
+
+
+		String[] names = {"Ola", "Hans", "Leif"};
+
+		for (String name : names) {
+			System.out.println(name);
 		}
 
 	}
