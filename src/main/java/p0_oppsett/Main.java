@@ -1,5 +1,5 @@
-package p0_oppsett.s2_hello_world;
+package p0_oppsett;
 
-public class Teori {
+public class Main {
 
 }
