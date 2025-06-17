@@ -5,15 +5,30 @@ public class PersonMedKonst {
 	String name;
 	int age;
 
-	// PersonMedKonst(String newName, int newAge) {
-	// 	name = newName;
-	// 	age = newAge;
+	// Hva er en default klasse
+
+	PersonMedKonst(String newName, int newAge) {
+		name = newName;
+		age = newAge;
+	}
+
+	// PersonMedKonst(String name, int age) {
+	// 	this.name = name;
+	// 	this.age = age;
 	// }
 
-	PersonMedKonst(String name, int age) {
+	// PersonMedKonst(String name) {
+	// 	this(name, 0);
+	// }
+
+	String getName() {
+		return this.name;
+    }
+
+    void setName(String name) {
 		this.name = name;
-		this.age = age;
 	}
+
 
 	public static void main(String[] args) {
 		PersonMedKonst person = new PersonMedKonst("Hans", 22);
