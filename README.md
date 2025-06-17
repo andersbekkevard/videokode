@@ -5,6 +5,7 @@ A modular Java project for exploring core programming concepts, object-oriented 
 ---
 
 ## 🚀 Features
+
 - Well-organized modules for each topic (OOP, IO, Abstraction, etc.)
 - Example code and theory for each concept
 - Ready-to-run with Maven
@@ -13,6 +14,7 @@ A modular Java project for exploring core programming concepts, object-oriented 
 ---
 
 ## 📁 Project Structure
+
 ```
 src/
   main/
@@ -32,32 +34,42 @@ src/
 ---
 
 ## 🛠️ Getting Started
+
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/yourusername/videokode.git
    cd videokode
    ```
+
 2. **Build the project:**
+
    ```bash
    mvn clean install
    ```
+
 3. **Run an example:**
+
    ```bash
    mvn exec:java -Dexec.mainClass="p01_intro_java.YourMainClass"
    ```
+
    Replace `YourMainClass` with the class you want to run.
 
 ---
 
 ## 🤝 Contributing
+
 Contributions are welcome! Please open issues or submit pull requests for improvements, bug fixes, or new examples.
 
 ---
 
 ## 📄 License
+
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
 ## 📬 Contact
+
 Created by [Your Name](mailto:your.email@example.com) — feel free to reach out with questions or suggestions!
