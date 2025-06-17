@@ -39,5 +39,14 @@ public class Operatorer {
 		System.out.println("5 / 3.0 = " + (a / c));
 		// heltall / desimaltall = desimaltall
 
+
+		boolean harEksamen = true;
+		boolean staattOpp = true;
+		boolean harForelesning = false;
+
+		System.out.println("Er på Sluppen i tide: " + (harEksamen && staattOpp));
+		System.out.println("Må rekke bussen: " + (harEksamen || harForelesning));
+		System.out.println("Sover fortsatt: " + (!staattOpp));
+
 	}
 }
