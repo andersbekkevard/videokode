@@ -20,7 +20,7 @@ public class Arrays {
 
 		System.out.println(tall); // Denne skriver bare ut hvor i minnet arrayen vår er, ikke hva den inneholder
 		// Må hente ut en og en verdi
-		System.out.println("Tall 2: " + tall[0] + ", " + tall[1] + ", " + tall[2]);
+		System.out.println("Tall: " + tall[0] + ", " + tall[1] + ", " + tall[2]);
 		// Ser også her at siden vi ikke definerte tall[2] ble den satt til verdien 0
 
 		System.out.println(andreTall[1]);

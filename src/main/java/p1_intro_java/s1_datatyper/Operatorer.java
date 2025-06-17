@@ -48,5 +48,10 @@ public class Operatorer {
 		System.out.println("Må rekke bussen: " + (harEksamen || harForelesning));
 		System.out.println("Sover fortsatt: " + (!staattOpp));
 
+		char onsketKarakter = 'A';
+		char faktiskKarakter = 'C';
+		System.out.println("Fikk vi det vi håpet på: " + (onsketKarakter == faktiskKarakter));
+		System.out.println("Fikk noe annet enn vi håpet: " + (onsketKarakter != faktiskKarakter));
+
 	}
 }

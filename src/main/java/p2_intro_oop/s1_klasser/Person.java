@@ -2,8 +2,13 @@ package p2_intro_oop.s1_klasser;
 
 public class Person {
 
+	// Opprettelse av klassen Person
+	// med attributter
+
 	String name;
 	int age;
+
+
 
 	public static void main(String[] args) {
 		Person person1 = new Person();
@@ -21,6 +26,8 @@ public class Person {
 		} else {
 			System.out.println(person2.name + " er eldst");
 		}
+
+		// Begge personene kommer fra samme kode men de er hver sin uavhengige entitet likevel
 
 	}
 }

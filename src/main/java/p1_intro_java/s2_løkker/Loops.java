@@ -53,6 +53,9 @@ public class Loops {
 			System.out.println("x er ikke mellom 6 og 15");
 		}
 
+
+		// For each løkker er også en penere og enklere måte om man kun skal hente ut elementer
+
 		String[] names = { "Ola", "Hans", "Leif" };
 
 		for (String name : names) {

@@ -1,0 +1,24 @@
+package p2_intro_oop.s1_klasser;
+
+public class PersonMedKonst {
+
+	String name;
+	int age;
+
+	// PersonMedKonst(String newName, int newAge) {
+	// 	name = newName;
+	// 	age = newAge;
+	// }
+
+	PersonMedKonst(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	public static void main(String[] args) {
+		PersonMedKonst person = new PersonMedKonst("Hans", 22);
+		person.name = "Hanne";
+		person.age = 23;
+		System.out.println("Jeg heter " + person.name + " og jeg er " + person.age + " år gammel");
+	}
+}
