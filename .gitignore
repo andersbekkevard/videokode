@@ -35,7 +35,7 @@ __pycache__/
 *.pyw
 *.pyz
 
-.vscode/
-.cursor/
+# .vscode/
+# .cursor/
 
 target/
