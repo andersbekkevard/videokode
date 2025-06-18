@@ -1,10 +1,10 @@
-package p1_intro_java.s1_datatyper;
+package p1_intro_java.s1_datatyper.strings;
 
-public class Strings {
+public class BasicStrings {
 
 	public static void main(String[] args) {
 
-		// Enkle Stringmetoder i Java
+		// Enkle String-metoder i Java
 
 		String adresse = "Sluppenveien 14";
 
@@ -28,7 +28,8 @@ public class Strings {
 		String lowerCase = adresse.toLowerCase();
 		System.out.println(lowerCase);
 
-		// Legg inn mellomrom før og etter teksten
+		// *Legg inn mellomrom før og etter teksten*
+		// Trimmer bort mellomrom før og etter teksten
 		String trimmed = adresse.trim();
 		System.out.println(trimmed);
 
@@ -37,8 +38,8 @@ public class Strings {
 		System.out.println(replaced);
 
 		// Kan også bytte ut flere bokstaver på en gang
-		String theEnd = adresse.replace("ppen", "tten-");
-		System.out.println(theEnd);
+		String replaced2 = adresse.replace("veien", "gaten");
+		System.out.println(replaced2);
 
 		// Kan bruke til å fjerne deler av teksten
 		String withoutSluppen = adresse.replace("Sluppen", "");

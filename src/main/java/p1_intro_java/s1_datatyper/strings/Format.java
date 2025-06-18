@@ -1,9 +1,9 @@
-package p1_intro_java.s1_datatyper;
+package p1_intro_java.s1_datatyper.strings;
 
 public class Format {
 	public static void main(String[] args) {
 
-		// Formatere Strings i Java
+		// Formatere Strings i Java - Minner om Python f-strings
 
 		String name = "obama";
 		String email = "%s@stud.ntnu.no".formatted(name);
