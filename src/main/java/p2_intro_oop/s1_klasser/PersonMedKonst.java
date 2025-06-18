@@ -5,7 +5,10 @@ public class PersonMedKonst {
 	String name;
 	int age;
 
-	// Hva er en default klasse
+	// Hva er en default-konstruktør
+	// PersonMedKonst() {
+
+	// }
 
 	PersonMedKonst(String newName, int newAge) {
 		name = newName;
@@ -15,19 +18,20 @@ public class PersonMedKonst {
 	// PersonMedKonst(String name, int age) {
 	// 	this.name = name;
 	// 	this.age = age;
+	// // Sett dette objektet sin name til verdien vi fikk inn
 	// }
 
 	// PersonMedKonst(String name) {
 	// 	this(name, 0);
 	// }
 
-	String getName() {
-		return this.name;
-    }
+	// String getName() {
+	// 	return this.name;
+    // }
 
-    void setName(String name) {
-		this.name = name;
-	}
+    // void setName(String name) {
+	// 	this.name = name;
+	// }
 
 
 	public static void main(String[] args) {

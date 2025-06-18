@@ -1,4 +1,4 @@
-package p2_intro_oop.s2_innkapsling;
+package p2_intro_oop.s2_innkapsling_validering;
 
 public class Program {
     public static void main(String[] args) {
