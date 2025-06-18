@@ -3,6 +3,7 @@ package p2_intro_oop.s2_innkapsling_validering;
 public class Person {
     
     private int age;
+    private boolean isSleeping;
 
     public void setAge(int age) {
         // if (age >= 0) {
@@ -20,7 +21,15 @@ public class Person {
         this.age = age;
     }
 
-    
+    public void goToSleep() {
+        // Kan ikke være noe ugyldig argument som sendes inn i funksjonen når den ikke har argumenter
+        // Men tilstanden til objektet gjør funksjonskallet likevel ugyldig
+        if (isSleeping) {
+            throw new IllegalStateException("Sover allerede!");
+        }
+        System.out.println("Jeg legger seg...");
+        isSleeping = true;
+    }
 
 
     // Endres når video er igang

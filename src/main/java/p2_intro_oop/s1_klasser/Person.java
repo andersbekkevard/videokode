@@ -3,12 +3,12 @@ package p2_intro_oop.s1_klasser;
 public class Person {
 
 	// Opprettelse av klassen Person
-	// 
 
 	String name;
 	int age;
 
-
+	// Vi kan nå også ha unik oppførsel tilknyttet objektene
+	// Hva denne metoden skriver ut kommer an på hvilket objekt den er tilknytta
 	void sayHi() {
 		System.out.println("Hei jeg heter " + name);
 	}

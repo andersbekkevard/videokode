@@ -40,4 +40,5 @@ public class AdvancedStrings {
 		String formatted = String.format("Hei %s, hva er eposten din? %s", name, email);
 		System.out.println(formatted);
 	}
+	
 }

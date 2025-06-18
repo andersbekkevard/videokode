@@ -1,6 +1,6 @@
 package p2_intro_oop.s2_innkapsling_validering;
 
-public class Program {
+public class Hacker {
     public static void main(String[] args) {
         Innkapsling innkapsling = new Innkapsling();
 
@@ -9,5 +9,6 @@ public class Program {
         // System.out.println(innkapsling.secretPassword);
 
         System.out.println(innkapsling.getSecretPassword());
+
     }
 }
