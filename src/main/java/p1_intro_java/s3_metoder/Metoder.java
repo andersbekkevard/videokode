@@ -1,0 +1,34 @@
+package p1_intro_java.s3_metoder;
+
+public class Metoder {
+	// Funksjoner (Python) = Metoder (Java)
+
+	// Vi har allerede vært borte i main-metoden
+	// Enkelt sagt må all kode som skal kjøres stå inne i main-metoden
+	// Vi kan fortsatt definere andre metoder utenfor
+
+	// public static void main(String[] args) {
+	// }
+
+	// Samme syntaks
+	public static void doSomething() {
+		/*
+		 * Vi skal senere gå gjennom hvorfor vi må skrive public static
+		 * Men kort fortalt er dette modifikatorer som bestemmer hvordan man får tilgang
+		 * på metoden vår,
+		 * og for at den skal oppføre seg som vi er kjent med i Python
+		 * er det public static som blir riktig
+		 */
+
+		/*
+		 * Som vi har lært må java alltid vite hvilken datatype et objekt er
+		 * Det er for eksempel derfor vi må skrive
+		 */
+
+		int age = 20;
+	}
+
+	public static void main(String[] args) {
+		System.out.println("hello " + args[0] + args[1]);
+	}
+}
