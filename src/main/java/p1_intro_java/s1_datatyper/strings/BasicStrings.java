@@ -6,43 +6,43 @@ public class BasicStrings {
 
 		// Enkle String-metoder i Java
 
-		String adresse = "Sluppenveien 14";
+		String address = "Sluppenveien 14";
 
 		// Henter ut lengden av teksten
-		int length = adresse.length();
+		int length = address.length();
 		System.out.println(length);
 
 		// Henter ut en bokstav på en gitt indeks
-		char thirdChar = adresse.charAt(2);
+		char thirdChar = address.charAt(2);
 		System.out.println(thirdChar);
 
 		// Henter ut indeksen til en bokstav
-		int indexOfV = adresse.indexOf("v");
+		int indexOfV = address.indexOf("v");
 		System.out.println(indexOfV);
 
 		// Konverterer til store bokstaver
-		String upperCase = adresse.toUpperCase();
+		String upperCase = address.toUpperCase();
 		System.out.println(upperCase);
 
 		// Konverterer til små bokstaver
-		String lowerCase = adresse.toLowerCase();
+		String lowerCase = address.toLowerCase();
 		System.out.println(lowerCase);
 
 		// *Legg inn mellomrom før og etter teksten*
 		// Trimmer bort mellomrom før og etter teksten
-		String trimmed = adresse.trim();
+		String trimmed = address.trim();
 		System.out.println(trimmed);
 
 		// Erstatt alle p med t
-		String replaced = adresse.replace("p", "t");
+		String replaced = address.replace("p", "t");
 		System.out.println(replaced);
 
 		// Kan også bytte ut flere bokstaver på en gang
-		String replaced2 = adresse.replace("veien", "gaten");
+		String replaced2 = address.replace("veien", "gaten");
 		System.out.println(replaced2);
 
 		// Kan bruke til å fjerne deler av teksten
-		String withoutSluppen = adresse.replace("Sluppen", "");
+		String withoutSluppen = address.replace("Sluppen", "");
 		System.out.println(withoutSluppen);
 
 		// IsEmpty og isBlank, legger til og fjerner mellomrom
