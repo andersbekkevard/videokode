@@ -1,0 +1,8 @@
+/* Force Lato font for Mermaid diagrams */
+.mermaid .nodeLabel,
+.mermaid .edgeLabel,
+.mermaid text,
+.mermaid span,
+.mermaid tspan {
+	font-family: 'Lato', sans-serif !important;
+}
