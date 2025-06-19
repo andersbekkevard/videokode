@@ -9,7 +9,17 @@ public class TwoDLists {
     public static void main(String[] args) {
 
         // Man kan også løse dette med arrays om du ikke har behov for at størrelsen skal være dynamisk
-         // Har du et tre på rad spill kan du
+        // Har du et tre på rad spill kan du
+
+        String[] foods = {"Bread", "Cheese", "Ham"};
+        String[] drinks = {"Milk", "Juice", "Bread"};
+        String[] misc = {"Batteries", "Gum", "Soap"};
+
+        String[][] shoppingCart = {foods, drinks, misc};
+
+        System.out.println(Arrays.toString(shoppingCart));
+        System.out.println(Arrays.deepToString(shoppingCart));
+
 
         int[][] tictactoe = {
             {0,0,0},
@@ -22,6 +32,21 @@ public class TwoDLists {
         System.out.println(Arrays.toString(tictactoe));
         System.out.println(Arrays.deepToString(tictactoe));
 
+
+
+
+
+        List<String> kitchen = new ArrayList<>();
+        List<String> bedroom = new ArrayList<>(Arrays.asList("Bed"));
+
+        List<List<String>> movingLoad = new ArrayList<>();
+        movingLoad.add(kitchen);
+        movingLoad.add(bedroom);
+
+        kitchen.add("Fridge");
+        kitchen.add("Table");
+
+        System.out.println(movingLoad);
 
 
 
@@ -40,4 +65,5 @@ public class TwoDLists {
         System.out.println(mutable2dList);
     }
 
+    
 }

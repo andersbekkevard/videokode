@@ -14,24 +14,43 @@ public class ListsInJava {
         }
     }
 
-    public List<Integer> getLivefeedDiceRolls() {
-        // return this.diceRolls;
+    public List<Integer> getDiceRolls() {
+        return this.diceRolls;
+    }
+
+    public List<Integer> getUpdatingDiceRolls() {
         return Collections.unmodifiableList(this.diceRolls);
-        // return new ArrayList<>(this.diceRolls);
-        // return List.copyOf(this.diceRolls);
+    }
+
+    public List<Integer> getSnapshotDiceRolls() {
+        return List.copyOf(this.diceRolls);
     }
 
     public static void main(String[] args) {
 
-        ListsInJava lij = new ListsInJava();
-        lij.addRoll(5);
-        lij.addRoll(2);
-        lij.addRoll(7);
-        System.out.println(lij.diceRolls);
+        ListsInJava l = new ListsInJava();
+        l.addRoll(5);
+        l.addRoll(2);
+        System.out.println(l.diceRolls);
 
-        List<Integer> stolenList = lij.getDiceRolls();
-        stolenList.add(2);
-        
+        List<Integer> stolenList = l.getDiceRolls();
+        stolenList.add(40); // Dette vil kunne skje selv om vi har private
+        System.out.println(l.diceRolls);
+
+        List<Integer> updatingList = l.getUpdatingDiceRolls();
+        l.addRoll(3); 
+        System.out.println(updatingList); // Fortsetter å se oppdatering etter du fikk innsyn
+
+        List<Integer> snapshotList = l.getSnapshotDiceRolls();
+        l.addRoll(1);
+        System.out.println(snapshotList); // Innsyn begrenset til tidspunktet du fikk tilgang
+
+        l.diceRolls.size();
+        l.diceRolls.get(1);
+        l.diceRolls.contains(5);
+        l.diceRolls.remove(Integer.valueOf(5));
+        // getFirst, getLast, clear, isEmpty, indexOf ...
+
     }
 
 }
