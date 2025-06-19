@@ -18,5 +18,9 @@ public class DeleStrenger {
 		String[] parts = email.split("@");
 		System.out.println(parts[0]);
 		System.out.println(parts[1]);
+
+		// Hva hvis vi vil sette de sammen igjen?
+		String fullEmail = parts[0] + "@" + parts[1];
+		System.out.println(fullEmail);
 	}
 }

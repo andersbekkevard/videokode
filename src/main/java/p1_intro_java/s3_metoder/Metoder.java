@@ -19,6 +19,8 @@ public class Metoder {
 		 * og for at den skal oppføre seg som vi er kjent med i Python
 		 * er det public static som blir riktig
 		 */
+		// Vi kan prøve å printe noe i metoden vår
+		System.out.println("hello");
 
 		/*
 		 * Som vi har lært må java alltid vite hvilken datatype et objekt er
@@ -40,6 +42,11 @@ public class Metoder {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("hello " + args[0]);
+		// doSomething();
+
+		// Vi kan nå kalle metoden vår i main-metoden
+		// int age = doSomething();
+		// System.out.println(age);
+
 	}
 }
