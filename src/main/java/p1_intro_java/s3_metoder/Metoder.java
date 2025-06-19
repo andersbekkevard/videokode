@@ -11,7 +11,7 @@ public class Metoder {
 	// }
 
 	// Samme syntaks
-	public static void doSomething() {
+	public static int doSomething() {
 		/*
 		 * Vi skal senere gå gjennom hvorfor vi må skrive public static
 		 * Men kort fortalt er dette modifikatorer som bestemmer hvordan man får tilgang
@@ -26,9 +26,20 @@ public class Metoder {
 		 */
 
 		int age = 20;
+
+		// og ikke bare
+		// age = 20;
+
+		// Det samme gjelder for metoder; vi må si til java hvilken datatype vi skal
+		// returnere, og da må vi returnere den typen.
+
+		// void betyr at vi ikke returnerer noe
+		// vi kan for nå prøve å returnere en verdi
+
+		return age; // får error i editor, må bytte void -> int
 	}
 
 	public static void main(String[] args) {
-		System.out.println("hello " + args[0] + args[1]);
+		System.out.println("hello " + args[0]);
 	}
 }
