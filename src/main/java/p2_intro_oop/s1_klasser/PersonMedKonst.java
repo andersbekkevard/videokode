@@ -21,9 +21,11 @@ public class PersonMedKonst {
 	// // Sett dette objektet sin name til verdien vi fikk inn
 	// }
 
-	// PersonMedKonst(String name) {
-	// 	this(name, 0);
-	// }
+	PersonMedKonst(String name) {
+		// this(name, 0);
+		this.name = name;
+		this.age = 0;
+	}
 
 	// String getName() {
 	// 	return this.name;

@@ -38,4 +38,6 @@ public class Person {
 
 		// Vi ser at hva metoden gjør avhenger av hvilket objekt som utfører metoden
 	}
+
+	
 }

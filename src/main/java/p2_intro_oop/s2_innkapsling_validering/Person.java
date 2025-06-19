@@ -5,6 +5,11 @@ public class Person {
     private int age;
     private boolean isSleeping;
 
+    Person(int age, boolean isSleeping) {
+        this.age = age;
+        this.isSleeping = isSleeping;
+    }
+
     public void setAge(int age) {
         // if (age >= 0) {
         //     this.age = age;
@@ -35,6 +40,14 @@ public class Person {
     // Endres når video er igang
     public static void main(String[] args) {
         
+        Person hans = new Person(21, false);
+        hans.setAge(-22);
+
+        hans.setAge(22);
+
+        hans.goToSleep();
+        hans.goToSleep();
+
     }
 
 }

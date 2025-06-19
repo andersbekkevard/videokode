@@ -5,6 +5,7 @@ public class Loops {
 	public static void main(String[] args) {
 
 		int poeng = 87;
+		poeng++;
 		boolean duSkrevAdressenTilSensorIBesvarelsen = true;
 
 		// Uten boolsk først, legg så til
