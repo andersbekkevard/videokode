@@ -13,7 +13,12 @@ public class Stack_Set_Queue {
     }
 
     public static void eatPancakes(Stack<Integer> pancakes) {
-        System.out.println("Now eating pancake number " + pancakes.pop());
+        int temp = pancakes.pop();
+        if (temp == 1) {
+            System.out.println("First pancake is always ruined. Leave it for someone else");
+        } else {
+            System.out.println("Now eating pancake number " + temp);
+        }
     }
 
     public static void main(String[] args) {
@@ -34,6 +39,7 @@ public class Stack_Set_Queue {
         completeTask(tasks);
         completeTask(tasks);
         completeTask(tasks);
+
 
         Stack<Integer> pancakes = new Stack<>();
         pancakes.push(1);

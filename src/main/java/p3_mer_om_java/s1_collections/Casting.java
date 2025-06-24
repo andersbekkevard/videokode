@@ -14,6 +14,7 @@ public class Casting {
 
     public static void main(String[] args) {
 
+
         double num = 1.3;
         // Eksplisitt casting
         int castedNum = (int) num;
@@ -31,18 +32,15 @@ public class Casting {
         System.out.println((char) ('a' + 1));
 
         // System.out.println(nLettersAfter('a', 1));
-        
-        String numString = "42";
-        
-        int result = Integer.parseInt(numString) / 2; 
-        System.out.println(result);
 
+        
         // Vi vil caste fra en int til en String. Vi ser dette ikke går
-        // String stringResult = result;
+        // String stringNum = num;
         // Her skjer det castinger automatisk for oss hvor datatypen endres
-        String stringResult = ("" + result);
+        String stringNum = ("" + num);
+        System.out.println(stringNum);
         // Skjer også på vei tilbake
-        System.out.println(stringResult + 3);
+        System.out.println(stringNum + 3);
 
     }
 

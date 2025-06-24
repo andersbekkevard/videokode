@@ -3,14 +3,11 @@ package p3_mer_om_java.s1_collections;
 public class Wrappers {
     
     public static void main(String[] args) {
-        
 
-        // Vi har fram til nå sett på de primitive datatypene int char double og boolean
-        // Når vi skal introdusere lister er det sånn at Liste-objektet kun kan inneholde andre objekter
-        // Da trenger vi at de primitive typene med små forbokstaver inneholdes i en klasse
-
+        // Her ser vi at Java automatisk pakker de primitive typene inn i wrapper-klassene 
         int heltall = 5;
         Integer heltallObj = heltall;
+        Integer2 egendefinert = new Integer2(heltall);
 
         double desimal = 2.3;
         Double desimalObj = desimal;
@@ -40,9 +37,6 @@ public class Wrappers {
         // Kan og bruke
         String noeAnnet = Character.toString('a'); // men sjeldent nyttig
 
-    
-
-
 
         String unknownString = "1a2b3cXYZ";
         for (char c : unknownString.toCharArray()) {
@@ -65,7 +59,5 @@ public class Wrappers {
         System.out.println(infinity);
         System.out.println(infinity > 99999999);
 
-
-        
     }
 }
