@@ -12,8 +12,8 @@ public class Newspaper implements WeatherListener {
 
 	@Override
 	public void weatherUpdated(int oldTemp, int newTemp) {
-		if (newTemp > 20 || newTemp - oldTemp >= 10) {
-			this.headline = "EKSTRA! STRÅLENDE VÆR";
+		if (newTemp >= 20 || newTemp - oldTemp >= 10) {
+			System.out.println(this.name + ": " + "EKSTRA! STRÅLENDE VÆR");
 		}
 	}
 

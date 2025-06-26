@@ -1,12 +1,16 @@
 package p3_mer_om_java.s1_collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class ListsInJava {
 
     private List<Integer> diceRolls = new ArrayList<>();
+
+    private List<Integer> predefinedDiceRolls = new ArrayList<>(Arrays.asList(4,6,5,3,2));
+    private List<Integer> predefinedDiceRolls2 = new ArrayList<>(List.of(4,6,5,3,2));
 
     public void addRoll(int n) {
         if (n >= 1 && n <= 6) {
@@ -24,6 +28,16 @@ public class ListsInJava {
 
     public List<Integer> getSnapshotDiceRolls() {
         return List.copyOf(this.diceRolls);
+    }
+
+    public void printPredefinedDiceRolls() {
+        for (int i = 0; i < predefinedDiceRolls.size(); i++) {
+            System.out.println(predefinedDiceRolls.get(i));
+        }
+    }
+
+    public boolean containsSix() {
+        return this.predefinedDiceRolls.contains(6); 
     }
 
     public static void main(String[] args) {
@@ -45,11 +59,16 @@ public class ListsInJava {
         l.addRoll(1);
         System.out.println(snapshotList); // Innsyn begrenset til tidspunktet du fikk tilgang
 
-        l.diceRolls.size();
-        l.diceRolls.get(1);
-        l.diceRolls.contains(5);
-        l.diceRolls.remove(Integer.valueOf(5));
+
+        l.printPredefinedDiceRolls();
+
+        System.out.println(l.containsSix());
+        // l.predefinedDiceRolls.remove(6);
+        l.predefinedDiceRolls.remove(Integer.valueOf(6));
+        System.out.println(l.containsSix());
         // getFirst, getLast, clear, isEmpty, indexOf ...
+
+
 
     }
 

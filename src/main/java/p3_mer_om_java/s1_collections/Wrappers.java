@@ -1,5 +1,9 @@
 package p3_mer_om_java.s1_collections;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
+
 public class Wrappers {
     
     public static void main(String[] args) {

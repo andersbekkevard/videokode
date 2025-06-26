@@ -8,6 +8,10 @@ public class TwoDLists {
 
     public static void main(String[] args) {
 
+        // 2DLister - Liste av lister
+        // 2DArrays - Array av arrays
+
+        
         // Man kan også løse dette med arrays om du ikke har behov for at størrelsen skal være dynamisk
         // Har du et tre på rad spill kan du
 
@@ -21,6 +25,7 @@ public class TwoDLists {
         System.out.println(Arrays.deepToString(shoppingCart));
 
 
+        // Kan også være nyttig om du trenger å visualisere noe i et rutenett
         int[][] tictactoe = {
             {0,0,0},
             {0,0,0},

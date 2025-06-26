@@ -14,6 +14,7 @@ public class Forecaster implements WeatherListener {
 	@Override
 	public void weatherUpdated(int oldTemp, int newTemp) {
 		this.currentTemp = newTemp;
+		System.out.println(this.name + ": " + this.currentTemp);
 	}
 
 	@Override
