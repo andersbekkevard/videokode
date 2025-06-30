@@ -11,7 +11,7 @@ public class Metoder {
 	// }
 
 	// Samme syntaks
-	public static int doSomething() {
+	public static String doSomething() {
 		/*
 		 * Vi skal senere gå gjennom hvorfor vi må skrive public static
 		 * Men kort fortalt er dette modifikatorer som bestemmer hvordan man får tilgang
@@ -27,7 +27,7 @@ public class Metoder {
 		 * Det er for eksempel derfor vi må skrive
 		 */
 
-		int age = 20;
+		String language = "Java";
 
 		// og ikke bare
 		// age = 20;
@@ -38,15 +38,35 @@ public class Metoder {
 		// void betyr at vi ikke returnerer noe
 		// vi kan for nå prøve å returnere en verdi
 
-		return age; // får error i editor, må bytte void -> int
+		return language; // får error i editor, må bytte void -> String
+
+		/*
+		 * Java krever at vi sier hvilken datatype vi skal returnere, men ikke om det
+		 * faktisk skal være noe der
+		 * Dersom vi aldri gir en verdi til language, vil vi fortsatt få lov til å
+		 * returnere language
+		 * Men da vil det ikke være noe der, og vi vil returnere ingenting, eller null
+		 * som det heter i Java
+		 * 
+		 * Java betrakter altså denne som en string, selv om det ikke er noe der
+		 * 
+		 * - Demonstrer at får errors ved å kalle language.length()
+		 * 
+		 * Dette er det samme som å skrive
+		 * String language = null;
+		 */
 	}
 
 	public static void main(String[] args) {
 		// doSomething();
 
 		// Vi kan nå kalle metoden vår i main-metoden
-		// int age = doSomething();
-		// System.out.println(age);
+		// String language = doSomething();
+		// System.out.println(language);
+
+		// Som vi ser, får vi feil ved å kalle length() på language fordi den ikke
+		// finnes
+		// System.out.println(language.length());
 
 	}
 }
