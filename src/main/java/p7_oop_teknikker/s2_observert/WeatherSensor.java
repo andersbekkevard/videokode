@@ -29,7 +29,6 @@ public class WeatherSensor {
 	}
 
 
-
 	public static void main(String[] args) {
 
 		WeatherSensor sensor = new WeatherSensor();
