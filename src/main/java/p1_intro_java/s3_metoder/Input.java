@@ -44,5 +44,6 @@ public class Input {
 		scream("hjelp meg");
 		int number = sum(1, 2);
 		System.out.println(number);
+		int length = sum("hjelp", "meg");
 	}
 }
