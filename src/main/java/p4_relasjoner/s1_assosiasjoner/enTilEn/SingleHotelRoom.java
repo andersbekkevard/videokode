@@ -1,11 +1,11 @@
 package p4_relasjoner.s1_assosiasjoner.enTilEn;
 
-public class HotelRoom {
+public class SingleHotelRoom {
 
     private String roomName;
     private Guest guest;
 
-    public HotelRoom(String roomName) {
+    public SingleHotelRoom(String roomName) {
         if (roomName == null || roomName.isBlank()) {
             throw new IllegalArgumentException();
         }

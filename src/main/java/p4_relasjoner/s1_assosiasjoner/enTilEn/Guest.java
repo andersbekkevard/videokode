@@ -3,7 +3,7 @@ package p4_relasjoner.s1_assosiasjoner.enTilEn;
 public class Guest {
 
     private String name;
-    private HotelRoom room;
+    private SingleHotelRoom room;
 
     public Guest(String name) {
         if (name == null || name.isBlank()) {
@@ -18,7 +18,7 @@ public class Guest {
         return name;
     }
 
-    public HotelRoom getRoom() {
+    public SingleHotelRoom getRoom() {
         return room;
     }
 
@@ -33,7 +33,7 @@ public class Guest {
     // }
 
     // Denne kan løses veldig kort og elegenat rekursivt
-    public void assignRoom(HotelRoom room) {
+    public void assignRoom(SingleHotelRoom room) {
 
         if (this.room != null) {
             this.room.setGuest(null);
@@ -60,8 +60,8 @@ public class Guest {
         Guest g1 = new Guest("Otto");
         Guest g2 = new Guest("Anna");
 
-        HotelRoom hr1 = new HotelRoom("4-13");
-        HotelRoom hr2 = new HotelRoom("2-8");
+        SingleHotelRoom hr1 = new SingleHotelRoom("4-13");
+        SingleHotelRoom hr2 = new SingleHotelRoom("2-8");
 
         g1.assignRoom(hr1);
         g2.assignRoom(hr2);
