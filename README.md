@@ -1,11 +1,11 @@
-# 🎬 videokode
+#  videokode
 
 A modular Java project for exploring core programming concepts, object-oriented design, and practical coding techniques. Perfect for students, educators, and anyone looking to strengthen their Java skills through hands-on examples and exercises.
 
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Well-organized modules for each topic (OOP, IO, Abstraction, etc.)
 - Example code and theory for each concept
@@ -49,28 +49,11 @@ src/
    mvn clean install
    ```
 
-3. **Run an example:**
-
-   ```bash
-   mvn exec:java -Dexec.mainClass="p01_intro_java.YourMainClass"
-   ```
-
-   Replace `YourMainClass` with the class you want to run.
-
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please open issues or submit pull requests for improvements, bug fixes, or new examples.
-
----
 
 ## 📄 License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
-
-## 📬 Contact
-
-Created by [Your Name](mailto:your.email@example.com) — feel free to reach out with questions or suggestions!
