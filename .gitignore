@@ -37,6 +37,7 @@ __pycache__/
 
 # .vscode/
 .cursor/
+.claude/
 
 target/
 CLAUDE.md
