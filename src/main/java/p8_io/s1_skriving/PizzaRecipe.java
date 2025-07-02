@@ -1,4 +1,4 @@
-package p8_io.s1_skriving.med_tekst;
+package p8_io.s1_skriving;
 
 import java.util.List;
 import java.util.ArrayList;

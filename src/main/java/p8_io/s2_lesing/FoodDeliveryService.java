@@ -1,18 +1,21 @@
-package p8_io.s2_lesing.med_tekst;
-import p8_io.s1_skriving.med_tekst.PizzaRecipe;
-
+package p8_io.s2_lesing;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import p8_io.s1_skriving.PizzaRecipe;
+
 public class FoodDeliveryService {
 
     private List<PizzaRecipe> availableOrders = new ArrayList<>();
 
-    public void readOrdersFromFile(String filename) {
+    public void scannerReadOrdersFromFile(String filename) {
         try (Scanner scanner = new Scanner(new File(filename))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
@@ -21,6 +24,18 @@ public class FoodDeliveryService {
             }
         } catch (FileNotFoundException e) {
             System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    public void bufferedReaderReadOrdersFromFile(String filename) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                PizzaRecipe newPizza = this.getPizza(line);
+                availableOrders.add(newPizza);
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
         }
     }
 
@@ -37,7 +52,7 @@ public class FoodDeliveryService {
         FoodDeliveryService fds = new FoodDeliveryService();
 
         String filename = "pizzaRecipe.txt";
-        fds.readOrdersFromFile(filename);
+        fds.bufferedReaderReadOrdersFromFile(filename);
 
         for (PizzaRecipe r : fds.availableOrders) {
             System.out.println(r);
