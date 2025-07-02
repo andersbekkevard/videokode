@@ -1,4 +1,4 @@
-package p3_mer_om_java.s3_testing;
+package p3_mer_om_java.s3_testing.ramsay;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
