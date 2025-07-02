@@ -31,5 +31,11 @@ public class UsingStringBuilder {
 		sb.reverse();
 		System.out.println(sb.toString());
 
+		// For å legge inn linjeskift i en streng bruker vi \n
+		StringBuilder sb2 = new StringBuilder();
+		sb2.append("Hei\n");
+		sb2.append("på deg\n");
+		sb2.append("!\n");
+		System.out.println(sb2.toString());
 	}
 }
