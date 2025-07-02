@@ -1,10 +1,10 @@
-package p3_mer_om_java.s3_testing;
+package p3_mer_om_java.s3_testing.ramsay;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class RamsaysKitchenBugged {
+public class RamsaysKitchen {
 	private static final List<Ingredient> ingredients = List.of(
 			new Ingredient("Bun"),
 			new Ingredient("Sauce"),
@@ -21,13 +21,13 @@ public class RamsaysKitchenBugged {
 
 		// Check for bottom bun first
 		if (burger.isEmpty() || !burger.get(0).getName().equals("Bun")) {
-			System.out.println("🍞 «No bottom bun? What am I supposed to hold onto, hope?»");
+			System.out.println("No bottom bun? What am I supposed to hold onto, hope?");
 			isPerfect = false;
 		}
 
 		// Check for presence of patty
 		if (!burger.contains(new Ingredient("Patty"))) {
-			System.out.println("🍔 «There's no burger patty! Are you a vegetarian now?»");
+			System.out.println("There's no burger patty! Are you a vegetarian now?");
 			isPerfect = false;
 		}
 
@@ -35,32 +35,32 @@ public class RamsaysKitchenBugged {
 		int pattyIndex = burger.indexOf(new Ingredient("Patty"));
 		int cheeseIndex = burger.indexOf(new Ingredient("Cheese"));
 		if (cheeseIndex != -1 && (pattyIndex == -1 || cheeseIndex < pattyIndex)) {
-			System.out.println("🧀 «You forgot the patty goes first? Congratulations, you've made a cheese mattress!»");
+			System.out.println("You forgot the patty goes first? Congratulations, you've made a cheese mattress!");
 			isPerfect = false;
 		}
 
 		// Check for double tomatoes
 		if (burger.contains(new Ingredient("Tomato"))
 				&& burger.indexOf(new Ingredient("Tomato")) != burger.lastIndexOf(new Ingredient("Tomato"))) {
-			System.out.println("🍅 «Two layers of tomatoes? Are you making a burger or a bloody garden?»");
+			System.out.println("Two layers of tomatoes? Are you making a burger or a bloody garden?");
 			isPerfect = false;
 		}
 
 		// Check for missing bacon
 		if (!burger.contains(new Ingredient("Bacon"))) {
-			System.out.println("🥓 «Where's the bacon? Did it run away or did you forget it again?!»");
+			System.out.println("Where's the bacon? Did it run away or did you forget it again?!");
 			isPerfect = false;
 		}
 
 		// Check for proper buns
 		if (!(burger.get(0).getName().equals("Bun") && burger.get(burger.size() - 1).getName().equals("Bun"))) {
-			System.out.println("🍞 «No proper buns? Congratulations, you've just made an idiot sandwich!»");
+			System.out.println("No proper buns? Congratulations, you've just made an idiot sandwich!");
 			isPerfect = false;
 		}
 
 		if (isPerfect) {
 			System.out.println(
-					"🏆 Finally, a burger worthy of my taste buds! Congratulations, you've avoided total embarrassment.");
+					"Finally, a burger worthy of my taste buds! Congratulations, you've avoided total embarrassment.");
 		}
 	}
 
@@ -87,12 +87,7 @@ public class RamsaysKitchenBugged {
 		};
 
 		// Phase 1: Foundation (bottom bun)
-		/*
-		 * BUG 1: MISSING BOTTOM BUN
-		 * TRIGGERS: "No bottom bun? What am I supposed to hold onto, hope?"
-		 * FIX: Uncomment the line below to add the foundation layer
-		 */
-		// addIngredientByName(burger, availableIngredients, burgerBlueprint[0]);
+		addIngredientByName(burger, availableIngredients, burgerBlueprint[0]);
 
 		// Phase 2: Build base layers (sauce through lettuce)
 		for (int layerIndex = 1; layerIndex <= 2; layerIndex++) {
@@ -109,12 +104,7 @@ public class RamsaysKitchenBugged {
 		buildProteinSection(burger, availableIngredients, burgerBlueprint);
 
 		// Phase 4: Flavor enhancers (bacon + tomato + onion)
-		/*
-		 * BUG 3: MISSING BACON (OFF-BY-ONE ERROR)
-		 * TRIGGERS: "Where's the bacon? Did it run away or did you forget it again?!"
-		 * FIX: Change flavorStartIndex from 6 back to 5 to include bacon (index 5)
-		 */
-		int flavorStartIndex = 6; // WRONG: Should be 5 to include bacon
+		int flavorStartIndex = 5;
 		int flavorEndIndex = 7;
 		addFlavorLayers(burger, availableIngredients, burgerBlueprint, flavorStartIndex, flavorEndIndex);
 
@@ -166,14 +156,9 @@ public class RamsaysKitchenBugged {
 	 * Builds the critical protein section (patty then cheese)
 	 */
 	private static void buildProteinSection(List<Ingredient> burger, List<Ingredient> available, String[] blueprint) {
-		/*
-		 * BUG 2: MISSING PATTY (VEGETARIAN BURGER)
-		 * TRIGGERS: "There's no burger patty! Are you a vegetarian now?"
-		 * FIX: Uncomment the patty addition below
-		 */
 		// Add patty first (index 3)
-		// String pattyName = blueprint[3];
-		// addIngredientByName(burger, available, pattyName);
+		String pattyName = blueprint[3];
+		addIngredientByName(burger, available, pattyName);
 
 		// Add cheese directly after patty (index 4)
 		String cheeseName = blueprint[4];
@@ -201,17 +186,11 @@ public class RamsaysKitchenBugged {
 	 * Carefully adds exactly one tomato
 	 */
 	private static void addSingleTomato(List<Ingredient> burger, List<Ingredient> available) {
-		/*
-		 * BUG 4: MULTIPLE TOMATOES (GARDEN BURGER)
-		 * TRIGGERS:
-		 * "Two layers of tomatoes? Are you making a burger or a bloody garden?"
-		 * FIX: Uncomment the tomatoAdded logic to stop after adding one tomato
-		 */
-		// boolean tomatoAdded = false; // MISSING: This prevents multiple tomatoes
-		for (int i = 0; i < available.size(); i++) { // WRONG: Removed && !tomatoAdded condition
+		boolean tomatoAdded = false;
+		for (int i = 0; i < available.size() && !tomatoAdded; i++) {
 			if (available.get(i).getName().equals("Tomato")) {
 				burger.add(available.remove(i));
-				// tomatoAdded = true; // MISSING: This would stop the loop
+				tomatoAdded = true;
 			}
 		}
 	}
@@ -220,20 +199,13 @@ public class RamsaysKitchenBugged {
 	 * Completes burger with top bun
 	 */
 	private static void finalizeWithTopBun(List<Ingredient> burger, List<Ingredient> available, String topBunName) {
-		/*
-		 * BUG 5: MISSING TOP BUN (IDIOT SANDWICH)
-		 * TRIGGERS:
-		 * "No proper buns? Congratulations, you've just made an idiot sandwich!"
-		 * FIX: Uncomment the loop below to add the top bun
-		 */
 		// Find the remaining bun (should be second "Bun" in original list)
-		// for (int i = available.size() - 1; i >= 0; i--) { // Search backwards for
-		// variety
-		// if (available.get(i).getName().equals(topBunName)) {
-		// burger.add(available.remove(i));
-		// break;
-		// }
-		// }
+		for (int i = available.size() - 1; i >= 0; i--) { // Search backwards for variety
+			if (available.get(i).getName().equals(topBunName)) {
+				burger.add(available.remove(i));
+				break;
+			}
+		}
 	}
 
 	/**
@@ -316,7 +288,7 @@ public class RamsaysKitchenBugged {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("🍔 Gordon Ramsay's Kitchen - Burger Challenge!");
+		System.out.println("Gordon Ramsay's Kitchen - Burger Challenge!");
 		System.out.println("Original ingredients: " + ingredients);
 
 		// Test with shuffled ingredients
@@ -329,7 +301,7 @@ public class RamsaysKitchenBugged {
 		System.out.println("Perfect burger: " + perfectBurger);
 
 		// Let Gordon critique it
-		System.out.println("\n🎤 Gordon Ramsay's critique:");
+		System.out.println("\nGordon Ramsay's critique:");
 		critiqueBurger(perfectBurger);
 	}
 }

@@ -66,7 +66,7 @@ public class TemperamentalCoffeeMachine {
 			return "Perfect coffee! But I'm getting tired... maybe give me a break?";
 		}
 
-		return "Perfect coffee! ☕ Enjoy your delicious beverage!";
+		return "Perfect coffee! Enjoy your delicious beverage!";
 	}
 
 	/**
