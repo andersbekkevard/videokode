@@ -32,6 +32,7 @@ public class Time {
 		// Ønsker å få til
 		// 1. Hente ut året av dagens dato (getYear)
 		// 2. Lage en LocalDate som representerer i morgen (plusDays)
+		// ^Herunder forklare at immutable
 		// 3. Lage en LocalDateTime som er dagens dagens dato men i januar (withYear)
 	}
 }
