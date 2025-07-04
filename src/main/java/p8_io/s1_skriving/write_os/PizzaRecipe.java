@@ -1,4 +1,4 @@
-package p8_io.s1_skriving;
+package p8_io.s1_skriving.write_os;
 
 import java.util.List;
 import java.util.ArrayList;

@@ -1,0 +1,8 @@
+T101;Otto;otto@ntnu.com
+Paris;2024-06-12;2024-06-18
+12000
+
+T102;Anna;anna@ntnu.com
+Roma;2024-07-01;2024-07-07
+9500
+
