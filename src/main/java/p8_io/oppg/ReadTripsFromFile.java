@@ -123,10 +123,10 @@ public class ReadTripsFromFile {
         try (InputStream inputStream = new FileInputStream("src/main/java/p8_io/oppg/trips.csv")) {
             ResultSet set = ReadTripsFromFile.read(inputStream);
             set.trips().forEach(t -> System.out.println(t));
-            set.errors().forEach(e -> System.out.println(e));
+            set.errors().forEach(e -> System.out.println("Error on line: " + e));
         } catch (Exception e) {
             System.err.println("Feil: " + e.getMessage());
         }
     }
-    
+
 }
