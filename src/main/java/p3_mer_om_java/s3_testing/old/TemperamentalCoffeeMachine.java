@@ -1,4 +1,4 @@
-package p3_mer_om_java.s3_testing;
+package p3_mer_om_java.s3_testing.old;
 
 /**
  * A simple coffee machine with a temperamental personality.

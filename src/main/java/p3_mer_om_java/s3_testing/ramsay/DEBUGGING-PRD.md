@@ -1,3 +1,10 @@
+	private static final String NO_BOTTOM_BUN_MESSAGE = "No bottom bun? What am I supposed to hold onto, hope?";
+	private static final String CHEESE_MATTRESS_MESSAGE = "You forgot the patty goes first? Congratulations, you've made a cheese mattress!";
+	private static final String DOUBLE_TOMATOES_MESSAGE = "Two layers of tomatoes? Are you making a burger or a bloody garden?";
+	private static final String NO_BACON_MESSAGE = "Where's the bacon? Did it run away or did you forget it again?!";
+	
+
+
 Her er en ny iterasjon som tar utgangspunkt i mange av de samme ideene som potion-bryggingen, men med et scenario som er intuitivt og enkelt å forstå uten å lene seg på magiske elementer. Eksempelet er morsomt, intuitivt, og lett gjenkjennbart:
 
 ---

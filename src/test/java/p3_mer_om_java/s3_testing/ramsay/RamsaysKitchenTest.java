@@ -1,362 +1,157 @@
 package p3_mer_om_java.s3_testing.ramsay;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
-import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class RamsaysKitchenTest {
+class RamsaysKitchenTest {
 
-	private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-	private final PrintStream standardOut = System.out;
+	private List<Ingredient> testIngredients;
 
 	@BeforeEach
-	public void setUp() {
-		System.setOut(new PrintStream(outputStreamCaptor));
-	}
-
-	@AfterEach
-	public void tearDown() {
-		System.setOut(standardOut);
-	}
-
-	private List<Ingredient> createPerfectBurger() {
-		return Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Sauce"),
-				new Ingredient("Lettuce"),
-				new Ingredient("Patty"),
-				new Ingredient("Cheese"),
-				new Ingredient("Bacon"),
-				new Ingredient("Tomato"),
-				new Ingredient("Onion"),
-				new Ingredient("Bun"));
-	}
-
-	private List<Ingredient> createShuffledIngredients() {
-		List<Ingredient> shuffled = new ArrayList<>(Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Sauce"),
-				new Ingredient("Lettuce"),
-				new Ingredient("Patty"),
-				new Ingredient("Cheese"),
-				new Ingredient("Bacon"),
-				new Ingredient("Tomato"),
-				new Ingredient("Onion"),
-				new Ingredient("Bun")));
-		Collections.shuffle(shuffled);
-		return shuffled;
-	}
-
-	// Tests for critiqueBurger method
-
-	@Test
-	public void testCritiquePerfectBurger() {
-		List<Ingredient> perfectBurger = createPerfectBurger();
-
-		RamsaysKitchen.critiqueBurger(perfectBurger);
-
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("Finally, a burger worthy of my taste buds"));
-		assertTrue(output.contains("avoided total embarrassment"));
+	void setUp() {
+		testIngredients = new ArrayList<>(List.of(
+				new Ingredient("Bun", false, 100),
+				new Ingredient("Patty", false, 200),
+				new Ingredient("Cheese", false, 300),
+				new Ingredient("Tomato", false, 400),
+				new Ingredient("Lettuce", true, 50),
+				new Ingredient("Bun", false, 100),
+				new Ingredient("Onion", true, 60),
+				new Ingredient("Bacon", false, 70),
+				new Ingredient("Sauce", false, 80)));
 	}
 
 	@Test
-	public void testCritiqueBurgerWithoutBottomBun() {
-		List<Ingredient> noBunBurger = Arrays.asList(
-				new Ingredient("Sauce"),
-				new Ingredient("Lettuce"),
-				new Ingredient("Patty"),
-				new Ingredient("Cheese"),
-				new Ingredient("Bacon"),
-				new Ingredient("Tomato"),
-				new Ingredient("Onion"),
-				new Ingredient("Bun"));
+	@DisplayName("Burger should have proper bun structure")
+	void testBurgerHasProperBunStructure() {
+		List<Ingredient> burger = RamsaysKitchen.makeBurger(testIngredients);
 
-		RamsaysKitchen.critiqueBurger(noBunBurger);
-
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("No bottom bun"));
+		assertFalse(burger.isEmpty(), "Burger should not be empty");
+		assertEquals("Bun", burger.get(0).getName(), "First ingredient should be a bun");
+		assertEquals("Bun", burger.get(burger.size() - 1).getName(), "Last ingredient should be a bun");
 	}
 
 	@Test
-	public void testCritiqueBurgerWithoutPatty() {
-		List<Ingredient> noPattyBurger = Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Sauce"),
-				new Ingredient("Lettuce"),
-				new Ingredient("Cheese"),
-				new Ingredient("Bacon"),
-				new Ingredient("Tomato"),
-				new Ingredient("Onion"),
-				new Ingredient("Bun"));
+	@DisplayName("Burger should contain a meat patty")
+	void testBurgerContainsPatty() {
+		List<Ingredient> burger = RamsaysKitchen.makeBurger(testIngredients);
 
-		RamsaysKitchen.critiqueBurger(noPattyBurger);
+		boolean hasPatty = burger.stream()
+				.anyMatch(ingredient -> "Patty".equals(ingredient.getName()));
 
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("There's no burger patty"));
-		assertTrue(output.contains("vegetarian"));
+		assertTrue(hasPatty, "Burger must contain a patty");
 	}
 
 	@Test
-	public void testCritiqueBurgerWithCheeseBeforePatty() {
-		List<Ingredient> cheeseFirstBurger = Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Sauce"),
-				new Ingredient("Lettuce"),
-				new Ingredient("Cheese"),
-				new Ingredient("Patty"),
-				new Ingredient("Bacon"),
-				new Ingredient("Tomato"),
-				new Ingredient("Onion"),
-				new Ingredient("Bun"));
+	@DisplayName("Burger should not exceed calorie limit")
+	void testBurgerDoesNotExceedCalorieLimit() {
+		List<Ingredient> burger = RamsaysKitchen.makeBurger(testIngredients);
 
-		RamsaysKitchen.critiqueBurger(cheeseFirstBurger);
+		int totalCalories = burger.stream()
+				.mapToInt(Ingredient::getCalories)
+				.sum();
 
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("cheese mattress"));
+		assertTrue(totalCalories <= 750,
+				"Burger calories (" + totalCalories + ") should not exceed 750");
 	}
 
 	@Test
-	public void testCritiqueBurgerWithDoubleTomatoes() {
-		List<Ingredient> doubleTomatoBurger = Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Sauce"),
-				new Ingredient("Lettuce"),
-				new Ingredient("Patty"),
-				new Ingredient("Cheese"),
-				new Ingredient("Bacon"),
-				new Ingredient("Tomato"),
-				new Ingredient("Tomato"),
-				new Ingredient("Onion"),
-				new Ingredient("Bun"));
+	@DisplayName("Burger should have logical ingredient order")
+	void testBurgerIngredientOrder() {
+		List<Ingredient> burger = RamsaysKitchen.makeBurger(testIngredients);
 
-		RamsaysKitchen.critiqueBurger(doubleTomatoBurger);
+		// Find positions of buns and patty
+		int firstBunIndex = -1;
+		int lastBunIndex = -1;
+		int pattyIndex = -1;
 
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("Two layers of tomatoes"));
-		assertTrue(output.contains("bloody garden"));
+		for (int i = 0; i < burger.size(); i++) {
+			Ingredient ingredient = burger.get(i);
+			if ("Bun".equals(ingredient.getName())) {
+				if (firstBunIndex == -1) {
+					firstBunIndex = i;
+				}
+				lastBunIndex = i;
+			} else if ("Patty".equals(ingredient.getName())) {
+				pattyIndex = i;
+			}
+		}
+
+		assertEquals(0, firstBunIndex, "First bun should be at the beginning");
+		assertEquals(burger.size() - 1, lastBunIndex, "Last bun should be at the end");
+		assertTrue(pattyIndex > 0 && pattyIndex < burger.size() - 1,
+				"Patty should be between the buns, not at the edges");
 	}
 
 	@Test
-	public void testCritiqueBurgerWithoutBacon() {
-		List<Ingredient> noBaconBurger = Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Sauce"),
-				new Ingredient("Lettuce"),
-				new Ingredient("Patty"),
-				new Ingredient("Cheese"),
-				new Ingredient("Tomato"),
-				new Ingredient("Onion"),
-				new Ingredient("Bun"));
+	@DisplayName("Burger should maximize ingredients within calorie limit")
+	void testBurgerMaximizesIngredients() {
+		List<Ingredient> burger = RamsaysKitchen.makeBurger(testIngredients);
 
-		RamsaysKitchen.critiqueBurger(noBaconBurger);
+		int totalCalories = burger.stream()
+				.mapToInt(Ingredient::getCalories)
+				.sum();
 
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("Where's the bacon"));
+		// Should be close to 750 but not over
+		assertTrue(totalCalories <= 750, "Should not exceed calorie limit");
+		assertTrue(totalCalories >= 400, "Should use a reasonable amount of ingredients");
 	}
 
 	@Test
-	public void testCritiqueBurgerWithoutTopBun() {
-		List<Ingredient> noTopBunBurger = Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Sauce"),
-				new Ingredient("Lettuce"),
-				new Ingredient("Patty"),
-				new Ingredient("Cheese"),
-				new Ingredient("Bacon"),
-				new Ingredient("Tomato"),
-				new Ingredient("Onion"));
+	@DisplayName("Burger should handle vegetarian and non-vegetarian ingredients correctly")
+	void testBurgerHandlesVegetarianIngredients() {
+		List<Ingredient> burger = RamsaysKitchen.makeBurger(testIngredients);
 
-		RamsaysKitchen.critiqueBurger(noTopBunBurger);
+		// Should have at least one non-vegetarian ingredient (the patty)
+		boolean hasNonVegetarian = burger.stream()
+				.anyMatch(ingredient -> !ingredient.isVegetarian());
 
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("idiot sandwich"));
+		assertTrue(hasNonVegetarian, "Burger should contain non-vegetarian ingredients");
 	}
 
 	@Test
-	public void testCritiqueBurgerWithMultipleProblems() {
-		List<Ingredient> terribleBurger = Arrays.asList(
-				new Ingredient("Sauce"),
-				new Ingredient("Cheese"),
-				new Ingredient("Tomato"),
-				new Ingredient("Tomato"));
+	@DisplayName("Burger construction should be consistent")
+	void testBurgerConsistency() {
+		// Test multiple times to ensure consistent behavior
+		for (int i = 0; i < 5; i++) {
+			List<Ingredient> burger = RamsaysKitchen.makeBurger(testIngredients);
 
-		RamsaysKitchen.critiqueBurger(terribleBurger);
+			// Basic requirements should always be met
+			assertTrue(burger.size() >= 3, "Burger should have at least 3 ingredients (bun, patty, bun)");
+			assertEquals("Bun", burger.get(0).getName());
+			assertEquals("Bun", burger.get(burger.size() - 1).getName());
 
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("No bottom bun"));
-		assertTrue(output.contains("no burger patty"));
-		assertTrue(output.contains("Two layers of tomatoes"));
-		assertTrue(output.contains("Where's the bacon"));
-		assertFalse(output.contains("Finally, a burger worthy"));
-	}
-
-	// Tests for makeBurger method
-
-	@Test
-	public void testMakeBurgerWithShuffledIngredients() {
-		List<Ingredient> shuffledIngredients = createShuffledIngredients();
-
-		List<Ingredient> result = RamsaysKitchen.makeBurger(shuffledIngredients);
-
-		assertEquals(9, result.size());
-		assertEquals("Bun", result.get(0).getName());
-		assertEquals("Sauce", result.get(1).getName());
-		assertEquals("Lettuce", result.get(2).getName());
-		assertEquals("Patty", result.get(3).getName());
-		assertEquals("Cheese", result.get(4).getName());
-		assertEquals("Bacon", result.get(5).getName());
-		assertEquals("Tomato", result.get(6).getName());
-		assertEquals("Onion", result.get(7).getName());
-		assertEquals("Bun", result.get(8).getName());
-	}
-
-	@Test
-	public void testMakeBurgerWithCorrectOrder() {
-		List<Ingredient> orderedIngredients = createPerfectBurger();
-
-		List<Ingredient> result = RamsaysKitchen.makeBurger(orderedIngredients);
-
-		assertEquals(9, result.size());
-		for (int i = 0; i < result.size(); i++) {
-			assertEquals(orderedIngredients.get(i).getName(), result.get(i).getName());
+			boolean hasPatty = burger.stream()
+					.anyMatch(ingredient -> "Patty".equals(ingredient.getName()));
+			assertTrue(hasPatty);
 		}
 	}
 
 	@Test
-	public void testMakeBurgerWithReverseOrder() {
-		List<Ingredient> reversedIngredients = createPerfectBurger();
-		Collections.reverse(reversedIngredients);
+	@DisplayName("Should handle edge case with minimal ingredients")
+	void testMinimalBurger() {
+		List<Ingredient> minimalIngredients = List.of(
+				new Ingredient("Bun", false, 100),
+				new Ingredient("Patty", false, 200),
+				new Ingredient("Bun", false, 100));
 
-		List<Ingredient> result = RamsaysKitchen.makeBurger(reversedIngredients);
+		List<Ingredient> burger = RamsaysKitchen.makeBurger(minimalIngredients);
 
-		assertEquals(9, result.size());
-		assertEquals("Bun", result.get(0).getName());
-		assertEquals("Bun", result.get(8).getName());
-		assertEquals("Patty", result.get(3).getName());
-		assertEquals("Cheese", result.get(4).getName());
-	}
+		assertEquals(3, burger.size(), "Minimal burger should have exactly 3 ingredients");
+		assertEquals("Bun", burger.get(0).getName());
+		assertEquals("Patty", burger.get(1).getName());
+		assertEquals("Bun", burger.get(2).getName());
 
-	@Test
-	public void testMakeBurgerProducesPerfectBurger() {
-		List<Ingredient> shuffledIngredients = createShuffledIngredients();
-
-		List<Ingredient> result = RamsaysKitchen.makeBurger(shuffledIngredients);
-
-		// Test that Gordon would approve of this burger
-		RamsaysKitchen.critiqueBurger(result);
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("Finally, a burger worthy"));
-	}
-
-	@Test
-	public void testMakeBurgerHandlesEmptyList() {
-		List<Ingredient> emptyIngredients = new ArrayList<>();
-
-		assertThrows(RuntimeException.class, () -> {
-			RamsaysKitchen.makeBurger(emptyIngredients);
-		});
-	}
-
-	@Test
-	public void testMakeBurgerWithMissingIngredient() {
-		List<Ingredient> incompleteIngredients = Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Lettuce"),
-				new Ingredient("Patty"),
-				new Ingredient("Cheese"),
-				new Ingredient("Bacon"),
-				new Ingredient("Tomato"),
-				new Ingredient("Onion"),
-				new Ingredient("Bun"));
-
-		assertThrows(RuntimeException.class, () -> {
-			RamsaysKitchen.makeBurger(incompleteIngredients);
-		});
-	}
-
-	@Test
-	public void testCritiqueBurgerWithSingleBun() {
-		List<Ingredient> singleBunBurger = Arrays.asList(new Ingredient("Bun"));
-
-		RamsaysKitchen.critiqueBurger(singleBunBurger);
-
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("no burger patty"));
-		assertTrue(output.contains("Where's the bacon"));
-		// Single bun satisfies both start and end bun check since burger.get(0) ==
-		// burger.get(0)
-		assertFalse(output.contains("Finally, a burger worthy"));
-	}
-
-	@Test
-	public void testCritiqueBurgerWithOnlyPattyAndBacon() {
-		List<Ingredient> minimalBurger = Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Patty"),
-				new Ingredient("Bacon"),
-				new Ingredient("Bun"));
-
-		RamsaysKitchen.critiqueBurger(minimalBurger);
-
-		String output = outputStreamCaptor.toString();
-		assertTrue(output.contains("Finally, a burger worthy"));
-	}
-
-	@Test
-	public void testIngredientEqualityInBurgerLogic() {
-		List<Ingredient> burger = Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Patty"),
-				new Ingredient("Bacon"),
-				new Ingredient("Bun"));
-
-		// Test that ingredient equality works correctly in contains() calls
-		assertTrue(burger.contains(new Ingredient("Patty")));
-		assertTrue(burger.contains(new Ingredient("Bacon")));
-		assertFalse(burger.contains(new Ingredient("Cheese")));
-	}
-
-	@Test
-	public void testBurgerIndexLogic() {
-		List<Ingredient> burger = Arrays.asList(
-				new Ingredient("Bun"),
-				new Ingredient("Cheese"),
-				new Ingredient("Patty"),
-				new Ingredient("Bun"));
-
-		int pattyIndex = burger.indexOf(new Ingredient("Patty"));
-		int cheeseIndex = burger.indexOf(new Ingredient("Cheese"));
-
-		assertEquals(2, pattyIndex);
-		assertEquals(1, cheeseIndex);
-		assertTrue(cheeseIndex < pattyIndex);
-	}
-
-	@Test
-	public void testMakeBurgerPreservesIngredientObjects() {
-		List<Ingredient> ingredients = createShuffledIngredients();
-		List<Ingredient> originalCopy = new ArrayList<>(ingredients);
-
-		List<Ingredient> result = RamsaysKitchen.makeBurger(new ArrayList<>(ingredients));
-
-		// The makeBurger method modifies the input list, so we pass a copy
-		// Result should contain all original ingredients
-		assertEquals(originalCopy.size(), result.size());
-
-		// Verify the result burger has the correct structure
-		assertEquals("Bun", result.get(0).getName());
-		assertEquals("Bun", result.get(result.size() - 1).getName());
+		int totalCalories = burger.stream()
+				.mapToInt(Ingredient::getCalories)
+				.sum();
+		assertEquals(400, totalCalories, "Minimal burger should have 400 calories");
 	}
 }

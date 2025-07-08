@@ -1,4 +1,4 @@
-package p3_mer_om_java.s3_testing;
+package p3_mer_om_java.s3_testing.old;
 
 // JUnit 5 imports - these are the core testing framework imports
 import java.util.Random;

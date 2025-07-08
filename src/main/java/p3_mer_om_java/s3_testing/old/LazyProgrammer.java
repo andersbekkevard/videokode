@@ -1,4 +1,4 @@
-package p3_mer_om_java.s3_testing;
+package p3_mer_om_java.s3_testing.old;
 
 import java.util.Arrays;
 import java.util.List;

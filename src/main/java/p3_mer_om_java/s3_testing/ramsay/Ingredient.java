@@ -4,13 +4,25 @@ import java.util.Objects;
 
 public class Ingredient {
 	private String name;
+	private boolean isVegetarian;
+	private int calories;
 
-	public Ingredient(String name) {
+	public Ingredient(String name, boolean isVegetarian, int calories) {
 		this.name = name;
+		this.isVegetarian = isVegetarian;
+		this.calories = calories;
 	}
 
 	public String getName() {
 		return name;
+	}
+
+	public boolean isVegetarian() {
+		return isVegetarian;
+	}
+
+	public int getCalories() {
+		return calories;
 	}
 
 	@Override
@@ -30,6 +42,6 @@ public class Ingredient {
 
 	@Override
 	public String toString() {
-		return name;
+		return name + " (" + (isVegetarian ? "vegetarian" : "non-vegetarian") + ", " + calories + " calories)";
 	}
 }
