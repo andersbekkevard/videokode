@@ -1,6 +1,6 @@
 package p1_intro_java.s1_datatyper;
 
-public class Operatorer {
+public class PrimDataTyp_el_Operatorer {
 
 	public static void main(String[] args) {
 
@@ -38,20 +38,6 @@ public class Operatorer {
 		double c = 3.0;
 		System.out.println("5 / 3.0 = " + (a / c));
 		// heltall / desimaltall = desimaltall
-
-
-		boolean harEksamen = true;
-		boolean staattOpp = true;
-		boolean harForelesning = false;
-
-		System.out.println("Er på Sluppen i tide: " + (harEksamen && staattOpp));
-		System.out.println("Må rekke bussen: " + (harEksamen || harForelesning));
-		System.out.println("Sover fortsatt: " + (!staattOpp));
-
-		char onsketKarakter = 'A';
-		char faktiskKarakter = 'C';
-		System.out.println("Fikk vi det vi håpet på: " + (onsketKarakter == faktiskKarakter));
-		System.out.println("Fikk noe annet enn vi håpet: " + (onsketKarakter != faktiskKarakter));
 
 	}
 }

@@ -32,7 +32,5 @@ public class Arrays {
 		String[] navn = { "Kari", "Ola" };
 		System.out.println("Første navn i lista: " + navn[0]);
 
-
-
 	}
 }
