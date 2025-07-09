@@ -2,6 +2,10 @@ package p7_oop_teknikker.s2_observert;
 
 public class Forecaster implements WeatherListener {
 
+	/**
+	 * Anders:
+	 * Hvor blir addListener kalt?
+	 */
 	private String name;
 	private int currentTemp;
 	private WeatherSensor sensor;
