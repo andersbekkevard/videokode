@@ -85,8 +85,6 @@ public class ReadTripsFromFile {
         List<Trip> trips = new ArrayList<>();
         List<Integer> errors = new ArrayList<>();
 
-        ResultSet result = new ResultSet(trips, errors);
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         int lineNum = 1; 
         String line = reader.readLine(); // Første linje headere
@@ -123,7 +121,7 @@ public class ReadTripsFromFile {
         try (InputStream inputStream = new FileInputStream("src/main/java/p8_io/oppg/trips.csv")) {
             ResultSet set = ReadTripsFromFile.read(inputStream);
             set.trips().forEach(t -> System.out.println(t));
-            set.errors().forEach(e -> System.out.println("Error on line: " + e));
+            set.errors().forEach(e -> System.out.println("Error on line: " +e));
         } catch (Exception e) {
             System.err.println("Feil: " + e.getMessage());
         }

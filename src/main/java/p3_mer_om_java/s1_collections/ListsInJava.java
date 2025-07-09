@@ -34,13 +34,7 @@ public class ListsInJava {
             diceRolls.add(n);
         }
     }
-Scanner scanner = new Scanner(new File("filnavn.txt"));
-BufferedReader reader = new BufferedReader(new FileReader("filnavn.txt"));
-FileReader reader = new FileReader("filnavn.txt");
-InputStream input = new FileInputStream("filnavn.txt");
-InputStreamReader reader = new InputStreamReader(new FileInputStream("filnavn.txt"));
-BufferedInputStream input = new BufferedInputStream(new FileInputStream("filnavn.txt"));
-DataInputStream input = new DataInputStream(new FileInputStream("filnavn.txt"));
+
     public List<Integer> getDiceRolls() {
         return this.diceRolls;
     }
