@@ -32,9 +32,9 @@ public class WeatherSensor {
 	public static void main(String[] args) {
 
 		WeatherSensor sensor = new WeatherSensor();
-		WeatherListener l1 = new Forecaster("Yr", sensor);
-		WeatherListener l2 = new Forecaster("Pent", sensor);
-		WeatherListener l3 = new Newspaper("VG", sensor);
+		WeatherListener l1 = new Forecaster("Yr");
+		WeatherListener l2 = new Forecaster("Pent");
+		WeatherListener l3 = new Newspaper("VG");
 		sensor.addListener(l1);
 		sensor.addListener(l2);
 		sensor.addListener(l3);

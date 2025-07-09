@@ -35,11 +35,12 @@ public class Pizzeria {
 	public static void otherWrite(List<PizzaRecipe> pizzaRecipes, OutputStream outputStream) throws IOException {
 		// Fortell man så kan skrive direkte til outputstream, men at man da må omgjøre
 		// til bytes
+		StringBuilder sb = new StringBuilder();
 		for (PizzaRecipe r : pizzaRecipes) {
 			String newEntry = r + "\n";
-			outputStream.write(newEntry.getBytes());
-			// outputStream.write((r.toString() + "\n").getBytes());
+			sb.append(newEntry);
 		}
+		outputStream.write(sb.toString().getBytes());
 		outputStream.flush();
 		outputStream.close();
 	}

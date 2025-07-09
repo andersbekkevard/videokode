@@ -8,11 +8,9 @@ public class Forecaster implements WeatherListener {
 	 */
 	private String name;
 	private int currentTemp;
-	private WeatherSensor sensor;
 
-	public Forecaster(String name, WeatherSensor sensor) {
+	public Forecaster(String name) {
 		this.name = name;
-		this.sensor = sensor;
 	}
 
 	@Override

@@ -3,11 +3,9 @@ package p7_oop_teknikker.s2_observert;
 public class Newspaper implements WeatherListener {
 	private String name;
 	private String headline;
-	private WeatherSensor sensor;
 
-	public Newspaper(String name, WeatherSensor sensor) {
+	public Newspaper(String name) {
 		this.name = name;
-		this.sensor = sensor;
 	}
 
 	@Override
