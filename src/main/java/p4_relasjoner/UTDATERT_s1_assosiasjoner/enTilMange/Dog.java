@@ -1,4 +1,4 @@
-package p4_relasjoner.s1_assosiasjoner.enTilMange;
+package p4_relasjoner.UTDATERT_s1_assosiasjoner.enTilMange;
 
 public class Dog {
     
@@ -6,9 +6,6 @@ public class Dog {
     private Owner owner;
 
     public Dog(String name) {
-        if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException();
-        }
         this.name = name;
     }
 

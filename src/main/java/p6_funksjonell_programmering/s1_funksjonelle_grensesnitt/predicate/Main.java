@@ -16,7 +16,7 @@ public class Main {
         Candidate c3 = new Candidate("Eddy", "MTKOM", 5);    
         List<Candidate> candidates = new ArrayList<>(Arrays.asList(c1,c2,c3));
 
-        List<Candidate> candidatesForInterview = getCandidatesForInterview(candidates, new CandidatePredicate())g
+        List<Candidate> candidatesForInterview = getCandidatesForInterview(candidates, new CandidatePredicate());
 
     }
 

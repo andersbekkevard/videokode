@@ -1,6 +1,7 @@
 package p4_relasjoner.s1_assosiasjoner_v2.enTilEn;
 
 public class SingleHotelRoom {
+    
     private int roomNumber;
     private Guest guest;
     
@@ -38,44 +39,37 @@ public class SingleHotelRoom {
     }
     
     @Override
-    public String toString() {
-        return "SingleHotelRoom{roomNumber=" + roomNumber + ", guest=" + 
-               (guest != null ? guest.getName() : "none") + "}";
-    }
-    
+	public String toString() {
+		if (guest == null) {
+			return roomNumber + ": ingen beboer";
+		}
+		return roomNumber + ": " + guest.getName();
+	}
+
     public static void main(String[] args) {
-        Guest alice = new Guest("Alice");
-        Guest bob = new Guest("Bob");
-        SingleHotelRoom room101 = new SingleHotelRoom(101);
-        SingleHotelRoom room102 = new SingleHotelRoom(102);
-        
-        System.out.println("=== Testing 1-1 Association (Wiki Approach) ===");
-        System.out.println("Initial state:");
-        System.out.println("Alice: " + alice);
-        System.out.println("Bob: " + bob);
-        System.out.println("Room 101: " + room101);
-        System.out.println("Room 102: " + room102);
-        
-        alice.setRoom(room101);
-        System.out.println("\nAfter alice.setRoom(room101):");
-        System.out.println("Alice: " + alice);
-        System.out.println("Room 101: " + room101);
-        
-        bob.setRoom(room101);
-        System.out.println("\nAfter bob.setRoom(room101) - should transfer room:");
-        System.out.println("Alice: " + alice);
-        System.out.println("Bob: " + bob);
-        System.out.println("Room 101: " + room101);
-        
-        room102.setGuest(bob);
-        System.out.println("\nAfter room102.setGuest(bob) - should transfer guest:");
-        System.out.println("Bob: " + bob);
-        System.out.println("Room 101: " + room101);
-        System.out.println("Room 102: " + room102);
-        
-        alice.setRoom(null);
-        System.out.println("\nAfter alice.setRoom(null):");
-        System.out.println("Alice: " + alice);
-        System.out.println("Room 101: " + room101);
+        Guest g1 = new Guest("Otto");
+        Guest g2 = new Guest("Anna");
+
+        SingleHotelRoom hr1 = new SingleHotelRoom(2);
+        SingleHotelRoom hr2 = new SingleHotelRoom(13);
+
+        g1.setRoom(hr1);
+        g2.setRoom(hr2);
+
+        System.out.println(g1);
+        System.out.println(g2);
+        System.out.println(hr1);
+        System.out.println(hr2);
+
+
+        System.out.println("\nOtto bytter rom og kaster ut Anna...\n");
+        g1.setRoom(hr2);
+
+        System.out.println(g1);
+        System.out.println(g2);
+
+        System.out.println(hr1);
+        System.out.println(hr2);
     }
+
 }

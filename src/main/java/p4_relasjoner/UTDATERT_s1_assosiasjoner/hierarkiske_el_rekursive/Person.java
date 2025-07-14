@@ -1,4 +1,4 @@
-package p4_relasjoner.s1_assosiasjoner.hierarkiske_el_rekursive;
+package p4_relasjoner.UTDATERT_s1_assosiasjoner.hierarkiske_el_rekursive;
 
 // Vi skal nå se når på objekter av samme klasse står i forhold til hverandre.
 // Dette har vi valgt å kalle for hierarkiske eller rekursive assosiasjoner
@@ -27,9 +27,6 @@ public class Person {
         this.predecessor = predecessor;
         if (predecessor != null && predecessor.successor != this) {
             predecessor.setSuccessor(this); // Setter forgjenger sin etterkommer til this
-            // AKA:
-            // Forteller faren din at du er sønnen hans 
-            //
         }
     }
 
@@ -75,6 +72,7 @@ public class Person {
         System.out.println(princess.isDescendantOf(king)); // true
         System.out.println(princess.isPredecessorOf(crownPrince)); // false
         System.out.println(king.isPredecessorOf(crownPrince));  // true
+
     }
 }
 

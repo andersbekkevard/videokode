@@ -1,4 +1,4 @@
-package p4_relasjoner.s1_assosiasjoner.enTilEn;
+package p4_relasjoner.UTDATERT_s1_assosiasjoner.enTilEn;
 
 public class SingleHotelRoom {
 
