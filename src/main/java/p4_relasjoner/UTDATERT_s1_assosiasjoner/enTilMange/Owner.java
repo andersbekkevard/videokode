@@ -1,4 +1,4 @@
-package p4_relasjoner.s1_assosiasjoner.enTilMange;
+package p4_relasjoner.UTDATERT_s1_assosiasjoner.enTilMange;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,6 @@ public class Owner {
     private String name;
     private List<Dog> dogs = new ArrayList<>();
 
-    
     public Owner(String name) {
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException();

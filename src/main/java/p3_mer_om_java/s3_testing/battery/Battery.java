@@ -57,7 +57,6 @@ public class Battery {
 		this.currentCharge += amount;
 	}
 
-	// Getter methods for debugging purposes
 	public double getMaxCapacity() {
 		return maxCapacity;
 	}

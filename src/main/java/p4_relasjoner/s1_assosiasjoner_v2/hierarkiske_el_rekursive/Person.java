@@ -1,9 +1,16 @@
 package p4_relasjoner.s1_assosiasjoner_v2.hierarkiske_el_rekursive;
 
+// Vi skal nå se når på objekter av samme klasse står i forhold til hverandre.
+// Dette har vi valgt å kalle for hierarkiske eller rekursive assosiasjoner
+
 public class Person {
+
+    // Kan ha alt annet ferdig opprettet unntatt settere og boolske metoder
+    // Bruker genrelle navnene predecessor og successor fordi det er typisk eksamensoppgaver
+
     private String name;
-    private Person predecessor;
-    private Person successor;
+    private Person predecessor; // Forgjenger
+    private Person successor;   // Etterkommer
     
     public Person(String name) {
         this.name = name;
@@ -55,26 +62,21 @@ public class Person {
         }
     }
     
-    public boolean isDescendantOf(Person person) {
+    // Er denne personen en etterkommer av p?
+    public boolean isDescendantOf(Person p) {
         Person current = this.predecessor;
-        while (current != null) {
-            if (current == person) {
+        while (current != null) { // Sjekker fram til du har nådd roten av familietreet
+            if (current == p) {
                 return true;
             }
-            current = current.predecessor;
+            current = current.predecessor; // Klatrer seg oppover treet
         }
-        return false;
+        return false; // Fant du ikke p på vei opp familietreet, er ikke p forgjengeren din
     }
     
-    public boolean isPredecessorOf(Person person) {
-        Person current = this.successor;
-        while (current != null) {
-            if (current == person) {
-                return true;
-            }
-            current = current.successor;
-        }
-        return false;
+    // Er denne personen en forgjenger til p?
+    public boolean isPredecessorOf(Person p) { 
+        return p != null && p.isDescendantOf(this); // Samme sjekk bare motsatt vei. Gjenbruker bare
     }
     
     public boolean hasSuccessor() {
@@ -85,60 +87,18 @@ public class Person {
         return predecessor != null;
     }
     
-    @Override
-    public String toString() {
-        return "Person{name='" + name + "', predecessor=" + 
-               (predecessor != null ? predecessor.getName() : "none") + 
-               ", successor=" + (successor != null ? successor.getName() : "none") + "}";
-    }
-    
     public static void main(String[] args) {
-        Person alice = new Person("Alice");
-        Person bob = new Person("Bob");
-        Person charlie = new Person("Charlie");
-        Person david = new Person("David");
+        Person king = new Person("Kong Harald");
+        Person crownPrince = new Person("Kronprins Haakon");
+        Person princess = new Person("Prinsesse Ingrid Alexandra");
+
+        king.setSuccessor(crownPrince);
+        crownPrince.setSuccessor(princess);
+
+        System.out.println(princess.isDescendantOf(king)); // true
+        System.out.println(princess.isPredecessorOf(crownPrince)); // false
+        System.out.println(king.isPredecessorOf(crownPrince));  // true
+
         
-        System.out.println("=== Testing Hierarchical Association (Wiki Approach) ===");
-        System.out.println("Initial state:");
-        System.out.println("Alice: " + alice);
-        System.out.println("Bob: " + bob);
-        System.out.println("Charlie: " + charlie);
-        System.out.println("David: " + david);
-        
-        alice.setSuccessor(bob);
-        System.out.println("\nAfter alice.setSuccessor(bob):");
-        System.out.println("Alice: " + alice);
-        System.out.println("Bob: " + bob);
-        
-        bob.setSuccessor(charlie);
-        System.out.println("\nAfter bob.setSuccessor(charlie):");
-        System.out.println("Alice: " + alice);
-        System.out.println("Bob: " + bob);
-        System.out.println("Charlie: " + charlie);
-        
-        charlie.setPredecessor(david);
-        System.out.println("\nAfter charlie.setPredecessor(david) - should break chain:");
-        System.out.println("Alice: " + alice);
-        System.out.println("Bob: " + bob);
-        System.out.println("Charlie: " + charlie);
-        System.out.println("David: " + david);
-        
-        System.out.println("\nTesting relationship queries:");
-        System.out.println("Is Charlie descendant of Alice? " + charlie.isDescendantOf(alice));
-        System.out.println("Is Charlie descendant of David? " + charlie.isDescendantOf(david));
-        System.out.println("Is Alice predecessor of Bob? " + alice.isPredecessorOf(bob));
-        System.out.println("Is David predecessor of Charlie? " + david.isPredecessorOf(charlie));
-        
-        david.setSuccessor(null);
-        charlie.setPredecessor(bob);
-        System.out.println("\nAfter reconnecting chain:");
-        System.out.println("Alice: " + alice);
-        System.out.println("Bob: " + bob);
-        System.out.println("Charlie: " + charlie);
-        System.out.println("David: " + david);
-        
-        System.out.println("\nFinal relationship queries:");
-        System.out.println("Is Charlie descendant of Alice? " + charlie.isDescendantOf(alice));
-        System.out.println("Is Alice predecessor of Charlie? " + alice.isPredecessorOf(charlie));
     }
 }

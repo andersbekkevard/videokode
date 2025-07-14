@@ -1,6 +1,7 @@
 package p4_relasjoner.s1_assosiasjoner_v2.enTilEn;
 
 public class Guest {
+
     private String name;
     private SingleHotelRoom room;
     
@@ -35,7 +36,9 @@ public class Guest {
     
     @Override
     public String toString() {
-        return "Guest{name='" + name + "', room=" + 
-               (room != null ? room.getRoomNumber() : "none") + "}";
+        if (room == null) {
+            return name + " har ikke et rom";
+        }
+        return name + " bor på " + room.getRoomNumber();
     }
 }

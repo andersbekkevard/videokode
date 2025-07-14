@@ -1,4 +1,4 @@
-package p4_relasjoner.s1_assosiasjoner.mangeTilMange;
+package p4_relasjoner.UTDATERT_s1_assosiasjoner.mangeTilMange;
 
 import java.util.ArrayList;
 import java.util.List;

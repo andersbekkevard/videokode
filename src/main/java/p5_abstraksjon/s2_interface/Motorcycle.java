@@ -18,4 +18,5 @@ public class Motorcycle implements Vehicle {
 	public void refuel() {
 		System.out.println("Refueling the motorcycle");
 	}
+
 }
