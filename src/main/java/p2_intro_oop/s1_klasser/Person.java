@@ -1,5 +1,7 @@
 package p2_intro_oop.s1_klasser;
 
+
+// Kommenter at det står class her. "Så alle filer vi har lagd tidligere har vært klasser uten at vi har tenkt over det"
 public class Person {
 
 	// Opprettelse av klassen Person

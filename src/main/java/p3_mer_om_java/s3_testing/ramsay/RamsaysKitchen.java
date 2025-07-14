@@ -10,6 +10,7 @@ import java.util.List;
  * 3. En burger kan maksimalt ha 750 kalorier
  */
 public class RamsaysKitchen {
+	// region Provided code
 	private static final String NO_PATTY_MESSAGE = "There's no burger patty! Are you a vegetarian now?";
 	private static final String NO_PROPER_BUNS_MESSAGE = "No proper buns? Congratulations, you've just made an idiot sandwich!";
 	private static final String PERFECT_BURGER_MESSAGE = "Finally, a burger worthy of my taste buds! Congratulations, you've avoided total embarrassment.";
@@ -24,7 +25,9 @@ public class RamsaysKitchen {
 			new Ingredient("Bun", false, 100),
 			new Ingredient("Onion", true, 60),
 			new Ingredient("Bacon", false, 70),
-			new Ingredient("Sauce", false, 80));
+			new Ingredient("Sauce", false, 80)
+			);
+	// endregion
 
 	/**
 	 * Gordon Ramsay critiques your sorry excuse for a burger.
