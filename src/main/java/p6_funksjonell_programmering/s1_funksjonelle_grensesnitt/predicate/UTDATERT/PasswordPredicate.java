@@ -1,4 +1,4 @@
-package p6_funksjonell_programmering.s1_funksjonelle_grensesnitt.predicate.Ut;
+package p6_funksjonell_programmering.s1_funksjonelle_grensesnitt.predicate.UTDATERT;
 
 import java.util.function.Predicate;
 

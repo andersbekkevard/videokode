@@ -1,4 +1,4 @@
-package p6_funksjonell_programmering.s1_funksjonelle_grensesnitt;
+package p6_funksjonell_programmering.s1_funksjonelle_grensesnitt.Anonym_og_andre_funk;
 
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
