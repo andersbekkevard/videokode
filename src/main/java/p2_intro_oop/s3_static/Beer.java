@@ -36,8 +36,15 @@ public class Beer {
 		// Beer.drink();
 
 		System.out.println("Number of beers: " + Beer.numberOfBeers);
-		// Gir ikke mening å kalle beer1.numberOfBeers
+		// Gir ikke mening å kalle beer1.numberOfBeers, (selv om vi får lov)
 		// System.out.println("Number of beers: " + beer1.numberOfBeers);
+
+		// Gir ikke mening å kalle beer1.getNumberOfBeers(), (selv om vi får lov)
+		// System.out.println("Number of beers: " + Beer.getNumberOfBeers());
+
+		// Vis at inne i klassen trenger vi ikke definere Beer for å kalle static
+		// metoder. Demonstrer utenfor klassen.
+		System.out.println("Number of beers: " + getNumberOfBeers());
 	}
 
 }
