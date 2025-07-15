@@ -1,10 +1,10 @@
 package p8_io.s1_skriving.write_os;
 
 import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -52,13 +52,13 @@ public class Pizzeria {
 				new PizzaRecipe("Hawaii", Arrays.asList("Tomatsaus", "Ost", "Skinke", "Ananas")),
 				new PizzaRecipe("Pepperoni", Arrays.asList("Tomatsaus", "Ost", "Pepperoni"))));
 
-		try (OutputStream outputStream = new PrintStream("files/pizzaRecipes.txt")) {
+		try (OutputStream outputStream = new FileOutputStream("files/pizzaRecipes.txt")) {
 			Pizzeria.write(pizzaRecipes, outputStream);
 		} catch (Exception e) {
 			System.err.println("Feil i skrivefunksjonen! Error: " + e.getMessage());
 		}
 
-		try (OutputStream outputStream = new PrintStream("files/otherPizzaRecipes.txt")) {
+		try (OutputStream outputStream = new FileOutputStream("files/otherPizzaRecipes.txt")) {
 			Pizzeria.otherWrite(pizzaRecipes, outputStream);
 		} catch (Exception e) {
 			System.err.println("Feil i skrivefunksjonen! Error: " + e.getMessage());
