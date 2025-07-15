@@ -24,4 +24,9 @@ public class Candidate {
         return year;
     }
 
+    @Override
+    public String toString() {
+        return name + ", " + program + ", " + year;
+    }
+
 }

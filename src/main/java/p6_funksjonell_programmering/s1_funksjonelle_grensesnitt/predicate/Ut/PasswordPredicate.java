@@ -1,4 +1,4 @@
-package p6_funksjonell_programmering.s1_funksjonelle_grensesnitt.predicate;
+package p6_funksjonell_programmering.s1_funksjonelle_grensesnitt.predicate.Ut;
 
 import java.util.function.Predicate;
 
@@ -10,10 +10,7 @@ public class PasswordPredicate implements Predicate<String> {
 
     @Override
     public boolean test(String t) {
-        if (t == null || t.length() < 5) {
-            return false;
-        }
-        return true; // Fjern om det under legges til
+        return t != null && t.length() < 5;    
 
         // Mulig å legge til
 

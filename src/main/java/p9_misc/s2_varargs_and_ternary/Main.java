@@ -1,4 +1,4 @@
-package p9_misc.s2_varargs;
+package p9_misc.s2_varargs_and_ternary;
 
 import java.util.Arrays;
 
@@ -30,8 +30,7 @@ public class Main {
         // Den kan til og med ta arrayen vår som argument
         System.out.println(sumVarargs(nums));
         System.out.println(sumVarargs(1,2,3,4,5));
-
-    
+        
     }
 
     
@@ -72,7 +71,6 @@ public class Main {
         return Arrays.stream(nums).sum();
     }
     
-
 
 
 }

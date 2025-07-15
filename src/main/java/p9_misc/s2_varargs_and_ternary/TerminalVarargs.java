@@ -1,4 +1,4 @@
-package p9_misc.s2_varargs;
+package p9_misc.s2_varargs_and_ternary;
 
 public class TerminalVarargs {
 
