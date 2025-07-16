@@ -14,20 +14,16 @@ public class Stack_Set_Queue {
 
     public static void eatPancakes(Stack<Integer> pancakes) {
         int temp = pancakes.pop();
-        if (temp == 1) {
-            System.out.println("First pancake is always ruined. Leave it for someone else");
-        } else {
-            System.out.println("Now eating pancake number " + temp);
-        }
+        System.out.println("Now eating pancake number " + temp);
     }
 
     public static void main(String[] args) {
 
         Set<String> participants = new HashSet<>();
 
+        participants.add("Anne");
+        participants.add("Anne");
         participants.add("Otto");
-        participants.add("Anne");
-        participants.add("Anne");
 
         System.out.println(participants);
 

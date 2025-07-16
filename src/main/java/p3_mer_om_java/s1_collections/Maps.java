@@ -28,6 +28,8 @@ public class Maps {
 		// Siden keys må være unike overskriver dette valuen som stod fra før
 		grades.put("Anne", 'C');
 
+		// INNEHOLDER IKKE ANNE A OG ANNE C  BARE SISTE OPPFØRING
+
 		if (grades.containsValue('F')) {
 			System.out.println("Noen har fått F");
 		}
@@ -42,12 +44,13 @@ public class Maps {
 			System.out.println(s);
 		}
 
-		grades.remove("Bjørg");
-
+		
 		System.out.println("\nRegistrerte karakterer:");
 		for (Character c : grades.values()) {
 			System.out.println(c);
 		}
+		
+		grades.remove("Bjørg");
 
 		System.out.println("\nUtskrift:");
 		for (Entry<String, Character> e : grades.entrySet()) {
