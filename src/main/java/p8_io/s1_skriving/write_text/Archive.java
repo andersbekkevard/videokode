@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Archive {
-    
+
     private List<Book> booksInArchive = new ArrayList<>();
 
     public void setBooksInArchive(List<Book> books) {
@@ -17,7 +17,7 @@ public class Archive {
     }
 
     public void writeBooksToFile(String filename) {
-        // Skriv først bare writeren  så ta try catch
+        // Skriv først bare writeren så ta try catch
         try {
             PrintWriter writer = new PrintWriter(filename);
             for (Book b : booksInArchive) {
@@ -51,8 +51,9 @@ public class Archive {
             new Book("Victoria", "Knut Hamsun",1898),
             new Book("Prosessen", "Franz Kafka", 1925),
             new Book("Don Quijote", "Miguel de Cervante", 1605),
-            new Book("En pingles dagbok", "Jeff Kinney", 2007)
-        ));
+            new Book("En pingles dagbok", "Jeff Kinney", 2007);
+
+
 
         archive.setBooksInArchive(books);
 
