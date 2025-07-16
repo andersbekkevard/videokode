@@ -56,5 +56,4 @@ public class Clown implements Comparable<Clown> {
 	public int compareTo(Clown o) {
 		return this.humorLevel - o.humorLevel;
 	}
-
 }
