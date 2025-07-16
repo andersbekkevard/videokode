@@ -4,6 +4,7 @@ import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
@@ -19,8 +20,6 @@ public class OtherFuncInterfaces {
             }
         };
         gamerTagGenerator.accept("Otto");
-
-
 
         // Supplier<T>: Gir verdier, tar ikke inn noe
         Supplier<Integer> diceRoll = new Supplier<Integer>() {
@@ -60,8 +59,7 @@ public class OtherFuncInterfaces {
         };
         System.out.println(stringZipper.apply("123", "XYZ"));
 
-
-
+        
         // UnaryOperator<T>: Tar inn en verdi, og returnerer en verdi av samme type
         UnaryOperator<String> censor = new UnaryOperator<String>() {
             @Override
