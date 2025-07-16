@@ -1,4 +1,4 @@
-package p6_funksjonell_programmering.s2_lambda;
+package p6_funksjonell_programmering.s2_lambda.gammelt;
 
 import java.util.Comparator;
 import java.util.function.Predicate;

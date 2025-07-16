@@ -5,11 +5,21 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
+ * I denne videoen skal vi snakke om Comparator og Comparable.
+ * Dette er to måter å sammenligne objekter på i Java.
+ * 
+ * Kort fortalt går Comparable ut på at man implementerer logikken for å sammenligne objekter i klassen selv, ved å implementere en interface
+ * Comparator går ut på å lage et eget objekt som implementerer logikken for å sammenligne objekter.
+ * 
+ * Vi begynner med comparable:
+ */
+
+/**
  * 1. Forklar Clown-klassen
- * 2. Skriv og forklar ClownComparator-klassen
- * 3. Demonstrer bruk av .compare()
- * 4. Demonstrer bruk av .sort()
- * 5. Implementer Comparable<Clown> i Clown-klassen
+ * 2. Implementer Comparable<Clown> i Clown-klassen
+ * 3. Demonstrer bruk av .sort()
+ * 4. Demonstrer bruk av .compare()
+ * 5. Skriv og forklar ClownComparator-klassen
  */
 public class Clown implements Comparable<Clown> {
 	private String name;
@@ -56,5 +66,4 @@ public class Clown implements Comparable<Clown> {
 	public int compareTo(Clown o) {
 		return this.humorLevel - o.humorLevel;
 	}
-
 }

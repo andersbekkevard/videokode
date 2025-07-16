@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class CandidatePredicate implements Predicate<Candidate> {
-    
+public class InternshipCandidatePredicate implements Predicate<Candidate> {
+
     private static List<String> validPrograms = new ArrayList<>(Arrays.asList("MTDT", "MTING", "MTKOM"));
 
     @Override

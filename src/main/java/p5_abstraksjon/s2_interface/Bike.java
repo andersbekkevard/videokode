@@ -8,6 +8,11 @@ import java.util.List;
  * lettvekts alternativ)
  * Eks: "Vi vil bare kune ha en list.forEach(vehicle -> vehicle.start())"
  */
+
+/**
+ * Denne kan være kort, for de kommer rett fra forrige video. Trenger derfor
+ * ikke introdusere klassene så nøye
+ */
 public class Bike implements Vehicle {
 	private String brand;
 	private String model;
