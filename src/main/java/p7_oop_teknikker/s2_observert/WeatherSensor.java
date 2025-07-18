@@ -28,7 +28,6 @@ public class WeatherSensor {
 		listeners.forEach(l -> l.weatherUpdated(oldTemp, newTemp));
 	}
 
-
 	public static void main(String[] args) {
 
 		WeatherSensor sensor = new WeatherSensor();
