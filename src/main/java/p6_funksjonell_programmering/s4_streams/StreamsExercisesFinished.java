@@ -132,4 +132,101 @@ public class StreamsExercisesFinished {
 	public static List<Person> Task10(List<Person> list) {
 		return list.stream().filter(x -> x.getAge() > 18).collect(Collectors.toList());
 	}
+
+	public static void main(String[] args) {
+		// testTask1();
+		// testTask2();
+		// testTask3();
+		// testTask4();
+		// testTask5();
+		// testTask6();
+		// testTask7();
+		// testTask8();
+		// testTask9();
+		testTask10();
+	}
+
+	public static void testTask1() {
+		System.out.println("=== Task 1: Skriv ut alle tall større enn 7 ===");
+		List<Integer> list = Arrays.asList(1, 5, 8, 10, 3, 7, 9);
+		Task1(list);
+		System.out.println();
+	}
+
+	public static void testTask2() {
+		System.out.println("=== Task 2: Filtrer lange ord (> 5 tegn) ===");
+		List<String> list = Arrays.asList("banan", "appelsin", "kiwi", "drue", "vannmelon");
+		List<String> result = Task2(list);
+		System.out.println("Resultat: " + result);
+		System.out.println();
+	}
+
+	public static void testTask3() {
+		System.out.println("=== Task 3: Multipliser alle tall med 2 ===");
+		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
+		List<Integer> result = Task3(list);
+		System.out.println("Resultat: " + result);
+		System.out.println();
+	}
+
+	public static void testTask4() {
+		System.out.println("=== Task 4: Finn det største tallet ===");
+		List<Integer> list = Arrays.asList(12, 34, 9, 56, 87, 23);
+		int result = Task4(list);
+		System.out.println("Største tall: " + result);
+		System.out.println();
+	}
+
+	public static void testTask5() {
+		System.out.println("=== Task 5: Sjekk om alle tall er positive ===");
+		List<Integer> list1 = Arrays.asList(1, 2, 3, 4, 5);
+		List<Integer> list2 = Arrays.asList(-1, 0, 3, 4);
+		System.out.println("Alle positive (liste 1): " + Task5(list1));
+		System.out.println("Alle positive (liste 2): " + Task5(list2));
+		System.out.println();
+	}
+
+	public static void testTask6() {
+		System.out.println("=== Task 6: Generer tall fra 0 til 20 ===");
+		List<Integer> result = Task6();
+		System.out.println("Resultat: " + result);
+		System.out.println();
+	}
+
+	public static void testTask7() {
+		System.out.println("=== Task 7: Hent de 10 første partallene ===");
+		List<Integer> list = Arrays.asList(1, 4, 3, 5, 2, 6, 8, 10, 3, 12, 14, 16, 18, 20, 22);
+		List<Integer> result = Task7(list);
+		System.out.println("Resultat: " + result);
+		System.out.println();
+	}
+
+	public static void testTask8() {
+		System.out.println("=== Task 8: Sorter array ===");
+		int[] array = { 7, 3, 1, 9, 4, 6 };
+		List<Integer> result = Task8(array);
+		System.out.println("Sortert liste: " + result);
+		System.out.println();
+	}
+
+	public static void testTask9() {
+		System.out.println("=== Task 9: Slå sammen ord med komma ===");
+		List<String> list = Arrays.asList("eple", "banan", "appelsin", "kiwi");
+		String result = Task9(list);
+		System.out.println("Resultat: " + result);
+		System.out.println();
+	}
+
+	public static void testTask10() {
+		System.out.println("=== Task 10: Finn voksne personer (alder > 18) ===");
+		List<Person> list = Arrays.asList(
+				new Person("Anna", 17),
+				new Person("Jonas", 21),
+				new Person("Kari", 30),
+				new Person("Petter", 15));
+		List<Person> result = Task10(list);
+		result.forEach(p -> System.out.println(p.getName() + " (" + p.getAge() + ")"));
+		System.out.println();
+	}
+
 }
