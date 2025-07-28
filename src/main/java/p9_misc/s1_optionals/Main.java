@@ -1,10 +1,17 @@
 package p9_misc.s1_optionals;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
+
 
 public class Main {
     
     public static void main(String[] args) {
+
+        // STEG 0
+
         
         // STEG 1
         // (VIS PERSON KLASSEN FORT)
@@ -70,10 +77,15 @@ public class Main {
     //     // return p;
     // }
 
+    
+
+    private static Person p1 = new Person("Otto", 22);
+    private static Person p2 = null;
+    private static List<Person> database = new ArrayList<>(Arrays.asList(p1,p2));
+
     // STEG 5
     private static Optional<Person> getPersonFromDatabase(String name) {
-        Person p1 = new Person(name, 22);
-        Person p2 = null;
+        
         return Optional.ofNullable(p1);
     }
 }

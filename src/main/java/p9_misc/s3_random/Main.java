@@ -41,24 +41,15 @@ public class Main {
         System.out.println("Bool " + (random.nextDouble() < 0.5)); // Gir bool
         System.out.println("Int " + (int) (random.nextDouble() * 50));
 
+
+        
         // Kan også erstattes av Math.random()
         System.out.println(Math.random());
         // Gir et tall mellom 0 inklusivt og 1 eksklusivt
         // 0 - 0.999...
         // Dette kan du gange opp for å endre spenn
         // Og plusse og trekke fra for å flytte intervallet
-        System.out.println("Terningkast (1–6): " + ((int) (Math.random() * 6) + 1));
-
-        Predicate<Integer> isEven = n -> n % 2 == 0;
-
-        List<Integer> nums = new ArrayList<>();
-        List<Integer> evenNums = new ArrayList<>();
-
-        for (int n : nums) {
-            if (isEven.test(n)) {
-                evenNums.add(n);
-            }
-        }
+        System.out.println("Terningkast (1-6): " + ((int) (Math.random() * 6) + 1));
 
 
     }

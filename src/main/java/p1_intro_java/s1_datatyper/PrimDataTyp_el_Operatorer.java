@@ -11,8 +11,12 @@ public class PrimDataTyp_el_Operatorer {
 
 		// Kan sette sammen regning med tekst for å gjøre utskrift mer lesbar
 		int frukt = epler + bananer;
+		System.out.println(frukt);
+		String info = "Antall frukt: ";
+		System.out.println(info + frukt);
 		System.out.println("Antall frukt: " + frukt);
 
+		// SÅ IKKE GÅ GJENNOM å samle frukter
 		// Bruker paranteser for å sikre rekkefølgen på utførelse
 		System.out.println("Antall frukt: " + epler + bananer);
 		System.out.println("Antall frukt: " + (epler + bananer));
