@@ -1,6 +1,7 @@
-package p6_funksjonell_programmering.s4_streams.comparator;
+package p6_funksjonell_programmering.s4_streams.comparator_tasks;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
 public class ComparatorTasks {
 
 	// region Helper classes for complex comparator tasks
-	static class Person {
+	public static class Person {
 		private String name;
 		private int age;
 
@@ -47,7 +48,7 @@ public class ComparatorTasks {
 		}
 	}
 
-	static class Student extends Person {
+	public static class Student extends Person {
 		private double grade;
 		private String course;
 
@@ -83,7 +84,7 @@ public class ComparatorTasks {
 		}
 	}
 
-	static class Employee {
+	public static class Employee {
 		private String name;
 		private String department;
 		private double salary;
@@ -124,7 +125,7 @@ public class ComparatorTasks {
 		}
 	}
 
-	static class Department {
+	public static class Department {
 		private String name;
 		private List<Employee> employees;
 
@@ -227,8 +228,7 @@ public class ComparatorTasks {
 	 * @return the person with the highest age
 	 */
 	public static Person task4(List<Person> people) {
-		// TODO: Implement this method
-		return null;
+		return people.stream().max(Comparator.comparing(Person::getAge)).get();
 	}
 
 	/**

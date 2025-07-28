@@ -8,10 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import org.junit.jupiter.api.Test;
 
-import p6_funksjonell_programmering.s4_streams.comparator.ComparatorTasks.Department;
-import p6_funksjonell_programmering.s4_streams.comparator.ComparatorTasks.Employee;
-import p6_funksjonell_programmering.s4_streams.comparator.ComparatorTasks.Person;
-import p6_funksjonell_programmering.s4_streams.comparator.ComparatorTasks.Student;
+import p6_funksjonell_programmering.s4_streams.comparator_tasks.ComparatorTasks;
+import p6_funksjonell_programmering.s4_streams.comparator_tasks.ComparatorTasks.Department;
+import p6_funksjonell_programmering.s4_streams.comparator_tasks.ComparatorTasks.Employee;
+import p6_funksjonell_programmering.s4_streams.comparator_tasks.ComparatorTasks.Person;
+import p6_funksjonell_programmering.s4_streams.comparator_tasks.ComparatorTasks.Student;
 
 class ComparatorTasksTest {
 

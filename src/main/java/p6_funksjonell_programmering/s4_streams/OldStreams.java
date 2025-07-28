@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class Streams {
+public class OldStreams {
 	/**
 	 * Filter
 	 * map

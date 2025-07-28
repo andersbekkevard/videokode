@@ -1,4 +1,4 @@
-package p7_oop_teknikker.s1_delegering;
+package p7_oop_teknikker.s1_delegering.v1;
 
 public class Teori {
 	public static void main(String[] args) {

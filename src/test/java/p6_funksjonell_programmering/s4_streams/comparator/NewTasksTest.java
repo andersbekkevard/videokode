@@ -11,10 +11,11 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import p6_funksjonell_programmering.s4_streams.comparator.NewTasks.Book;
-import p6_funksjonell_programmering.s4_streams.comparator.NewTasks.Department;
-import p6_funksjonell_programmering.s4_streams.comparator.NewTasks.Employee;
-import p6_funksjonell_programmering.s4_streams.comparator.NewTasks.Person;
+import p6_funksjonell_programmering.s4_streams.comparator_tasks.NewTasks;
+import p6_funksjonell_programmering.s4_streams.comparator_tasks.NewTasks.Book;
+import p6_funksjonell_programmering.s4_streams.comparator_tasks.NewTasks.Department;
+import p6_funksjonell_programmering.s4_streams.comparator_tasks.NewTasks.Employee;
+import p6_funksjonell_programmering.s4_streams.comparator_tasks.NewTasks.Person;
 
 @DisplayName("Comparator Tasks - Test Suite")
 class NewTasksTest {

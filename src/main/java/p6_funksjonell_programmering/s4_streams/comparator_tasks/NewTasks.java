@@ -1,4 +1,4 @@
-package p6_funksjonell_programmering.s4_streams.comparator;
+package p6_funksjonell_programmering.s4_streams.comparator_tasks;
 
 import java.util.ArrayList;
 import java.util.Arrays;
