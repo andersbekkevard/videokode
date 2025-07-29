@@ -10,6 +10,7 @@
   - [ ] Sammenligninger kodeeksempel
   - [ ] Kodevisning Delegering
   - [ ] Comparator eksempel
+  - [ ] Intro til kurset
 
 
 - [ ] Redigere videoer
@@ -17,12 +18,12 @@
   - [X] Interface kodevisning
   - [X] Comparator
   - [X] Iterator
-  - [X] Streams
+  - [X] Streams1
   - [X] AdvancedStrings
   - [X] Intro Streams
-  - [ ] Rekursive
-  - [ ] Intro I/O
-  - [ ] Write
-  - [ ] Outputstreams
+  - [X] Rekursive
+  - [X] Intro I/O
+  - [X] Write
+  - [X] Outputstreams
 
 ## Torstein
