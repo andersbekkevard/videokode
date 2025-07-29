@@ -1,27 +1,32 @@
-package p7_oop_teknikker.s1_delegering.v2;
+package p7_oop_teknikker.s1_delegering.v3;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 /**
- * Shop demonstrates the delegation pattern by delegating all price calculations
- * to PriceCalculator, which is the expert on pricing and currency conversion.
+ * Shop demonstrates the delegation pattern by delegating responsibilities to
+ * specialized classes:
+ * - PriceCalculator: handles all price calculations and currency conversion
+ * - InventoryPrinter: handles all inventory display and formatting
  * 
- * Shop focuses on inventory management and business logic, not on pricing
- * details.
+ * Shop focuses on inventory management and business logic, delegating pricing
+ * and display concerns to the appropriate experts.
  */
 public class Shop {
 	private Map<Item, Integer> inventory = new HashMap<>();
 	private PriceCalculator priceCalculator;
+	private InventoryPrinter inventoryPrinter;
 
 	/**
-	 * Creates a shop that displays prices in the specified currency
+	 * Creates a shop that displays prices in the specified currency.
+	 * DELEGATION: Creates both PriceCalculator and InventoryPrinter with
+	 * the specified display currency.
 	 * 
 	 * @param displayCurrency the currency to display prices in
 	 */
 	public Shop(Currency displayCurrency) {
 		this.priceCalculator = new PriceCalculator(displayCurrency);
+		this.inventoryPrinter = new InventoryPrinter(displayCurrency);
 	}
 
 	/**
@@ -67,21 +72,20 @@ public class Shop {
 	}
 
 	/**
+	 * Gets the inventory of this shop
+	 * 
+	 * @return the inventory map
+	 */
+	public Map<Item, Integer> getInventory() {
+		return new HashMap<>(inventory);
+	}
+
+	/**
 	 * Prints the shop's inventory with prices in the display currency
+	 * DELEGATION: Shop delegates display logic to InventoryPrinter
 	 */
 	public void printInventory() {
-		System.out.println("Shop Inventory (prices in " + getDisplayCurrency() + "):");
-		System.out.println("==========================================");
-		for (Entry<Item, Integer> entry : inventory.entrySet()) {
-			Item item = entry.getKey();
-			int quantity = entry.getValue();
-			double totalPrice = getItemPrice(item, quantity);
-			System.out.printf("%s: %d units = %.2f %s%n",
-					item.getName(), quantity, totalPrice, getDisplayCurrency());
-		}
-		System.out.println("==========================================");
-		System.out.printf("Total inventory value: %.2f %s%n",
-				getInventoryValue(), getDisplayCurrency());
+		inventoryPrinter.printInventory(inventory, priceCalculator);
 	}
 
 	public static void main(String[] args) {

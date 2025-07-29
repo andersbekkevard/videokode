@@ -2,21 +2,25 @@
 
 ## Anders:
 
-- [ ] Forberede kameraopptak
+- [X] Forberede kameraopptak
 
 - [ ] Filme Videoer
   - [X] Static
+  - [X] Filme Streams eksempel
+  - [ ] Sammenligninger kodeeksempel
   - [ ] Kodevisning Delegering
-  - [ ] Filme Streams eksempel
+  - [ ] Comparator eksempel
 
 
 - [ ] Redigere videoer
+  - [X] Interface intro
+  - [X] Interface kodevisning
+  - [X] Comparator
+  - [X] Iterator
+  - [X] Streams
+  - [X] AdvancedStrings
+  - [X] Intro Streams
   - [ ] Rekursive
-  - [ ] Interface intro
-  - [ ] Interface kodevisning
-  - [ ] Comparator
-  - [ ] Iterator
-  - [ ] Streams
   - [ ] Intro I/O
   - [ ] Write
   - [ ] Outputstreams

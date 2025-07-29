@@ -1,4 +1,4 @@
-package p7_oop_teknikker.s1_delegering.v2;
+package p7_oop_teknikker.s1_delegering.v3;
 
 import java.util.HashMap;
 import java.util.Map;
