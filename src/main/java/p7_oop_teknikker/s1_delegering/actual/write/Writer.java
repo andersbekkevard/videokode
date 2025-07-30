@@ -1,7 +1,7 @@
-package p7_oop_teknikker.s1_delegering.v4.write;
+package p7_oop_teknikker.s1_delegering.actual.write;
 
 public class Writer {
-	private Printer printer;
+	private IPrinter printer;
 
 	public Writer() {
 		this.printer = new Printer();
@@ -26,5 +26,10 @@ public class Writer {
 		System.out.println("Writer wants to publish: " + document.getTitle());
 		System.out.println("Writer delegates printing to Printer...");
 		printer.print(document);
+	}
+
+	// Method to switch printer implementation
+	public void setPrinter(IPrinter printer) {
+		this.printer = printer;
 	}
 }

@@ -13,7 +13,7 @@
   - [ ] Intro til kurset
 
 
-- [ ] Redigere videoer
+- [X] Redigere videoer
   - [X] Interface intro
   - [X] Interface kodevisning
   - [X] Comparator

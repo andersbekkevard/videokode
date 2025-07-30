@@ -1,4 +1,4 @@
-package p7_oop_teknikker.s1_delegering.v4.write;
+package p7_oop_teknikker.s1_delegering.actual.write;
 
 public class Document {
 	private String title;
