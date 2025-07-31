@@ -241,6 +241,46 @@ public class StudentGradeManager {
     }
 
     /**
+     * Returns a List of student names sorted by their grade in descending order.
+     *
+     * @return a sorted List of student names by grade (descending)
+     */
+    public List<String> getStudentsByGradeDescending() {
+        // TODO Implement the method getStudentsByGradeDescending
+        return null;
+    }
+
+    /**
+     * Returns a Map showing the distribution of letter grades (A, B, C, D, F).
+     *
+     * @return a Map where keys are letter grades and values are the count of students with that grade
+     */
+    public java.util.Map<Character, Integer> getGradeDistribution() {
+        // TODO Implement the method getGradeDistribution
+        return null;
+    }
+
+    /**
+     * Records the current date as the last update date for a student's grade.
+     *
+     * @param studentName the name of the student
+     */
+    public void recordGradeUpdateDate(String studentName) {
+        // TODO Implement the method recordGradeUpdateDate
+    }
+
+    /**
+     * Returns the last date a student's grade was updated.
+     *
+     * @param studentName the name of the student
+     * @return the last update date, or null if never updated
+     */
+    public java.util.Date getLastGradeUpdateDate(String studentName) {
+        // TODO Implement the method getLastGradeUpdateDate
+        return null;
+    }
+
+    /**
      * Parses a grade from a string and adds it to a student.
      * This method demonstrates wrapper class parsing methods.
      *

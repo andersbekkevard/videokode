@@ -331,6 +331,29 @@ public class TextAndNumberUtils {
     }
 
     /**
+     * Checks if a number is prime.
+     * A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+     *
+     * @param number the number to check
+     * @return true if the number is prime, false otherwise
+     */
+    public static boolean isPrime(int number) {
+        // TODO Implement the static method isPrime
+        return false;
+    }
+
+    /**
+     * Counts how many prime numbers are in the given array.
+     *
+     * @param numbers the array of integers
+     * @return the count of prime numbers, or 0 if array is null
+     */
+    public static int countPrimeNumbers(int[] numbers) {
+        // TODO Implement the static method countPrimeNumbers
+        return 0;
+    }
+
+    /**
      * Splits a string into an array of words using space as delimiter.
      * Multiple consecutive spaces should be treated as a single delimiter.
      *

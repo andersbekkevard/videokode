@@ -44,6 +44,7 @@ public class Rectangle extends Shape implements Drawable {
      * @throws IllegalArgumentException if name or color is null/blank, or if width or height is not positive
      */
     public Rectangle(String name, String color, double width, double height, double x, double y) {
+        super(name, color);
         // TODO Implement the constructor using super() to call parent constructor
     }
 

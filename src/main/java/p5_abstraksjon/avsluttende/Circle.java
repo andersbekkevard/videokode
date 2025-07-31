@@ -43,6 +43,7 @@ public class Circle extends Shape implements Drawable {
      * @throws IllegalArgumentException if name or color is null/blank, or if radius is not positive
      */
     public Circle(String name, String color, double radius, double x, double y) {
+        super(name, color);
         // TODO Implement the constructor using super() to call parent constructor
     }
 
