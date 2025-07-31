@@ -1,11 +1,11 @@
-package p4_relasjoner.inheritance_v2;
+package p4_relasjoner.avsluttende_v4;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Represents a garage that can store different types of vehicles.
- * This class demonstrates polymorphism by managing a collection of Vehicle objects.
+ * This class demonstrates polymorphism by managing a collection of Vehicle
+ * objects.
  */
 public class Garage {
 
@@ -22,7 +22,8 @@ public class Garage {
      * Adds a vehicle to the garage.
      *
      * @param vehicle The vehicle to add.
-     * @return true if the vehicle was added successfully, false if the garage is full.
+     * @return true if the vehicle was added successfully, false if the garage is
+     *         full.
      */
     public boolean addVehicle(Vehicle vehicle) {
         // TODO: Implement this method.
@@ -33,7 +34,8 @@ public class Garage {
      * Removes a vehicle from the garage based on its registration number.
      *
      * @param registrationNumber The registration number of the vehicle to remove.
-     * @return The removed vehicle, or null if no vehicle with the given registration number is found.
+     * @return The removed vehicle, or null if no vehicle with the given
+     *         registration number is found.
      */
     public Vehicle removeVehicle(String registrationNumber) {
         // TODO: Implement this method.
@@ -72,7 +74,8 @@ public class Garage {
     }
 
     /**
-     * Returns a string representation of the garage, listing all the vehicles it contains.
+     * Returns a string representation of the garage, listing all the vehicles it
+     * contains.
      *
      * @return A string describing the garage and its contents.
      */
@@ -80,8 +83,8 @@ public class Garage {
     public String toString() {
         // TODO: Implement this method.
         // Example: "Garage{vehicles=[
-        //   Car{registrationNumber='EL67890', numDoors=4},
-        //   Motorcycle{registrationNumber='MC54321', engineDisplacement=750}
+        // Car{registrationNumber='EL67890', numDoors=4},
+        // Motorcycle{registrationNumber='MC54321', engineDisplacement=750}
         // ]}"
         return "";
     }

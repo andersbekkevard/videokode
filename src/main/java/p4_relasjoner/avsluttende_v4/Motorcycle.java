@@ -1,4 +1,4 @@
-package p4_relasjoner.inheritance_v2;
+package p4_relasjoner.avsluttende_v4;
 
 /**
  * Represents a motorcycle, which is a specific type of Vehicle.
@@ -7,7 +7,8 @@ package p4_relasjoner.inheritance_v2;
 public class Motorcycle extends Vehicle {
 
     /**
-     * Constructs a new Motorcycle with the given registration number and engine displacement.
+     * Constructs a new Motorcycle with the given registration number and engine
+     * displacement.
      *
      * @param registrationNumber The registration number of the motorcycle.
      * @param engineDisplacement The engine displacement in cubic centimeters (cc).
@@ -40,7 +41,8 @@ public class Motorcycle extends Vehicle {
 
     @Override
     public String toString() {
-        // TODO: Implement this method to return a descriptive string for the motorcycle.
+        // TODO: Implement this method to return a descriptive string for the
+        // motorcycle.
         // Example: "Motorcycle{registrationNumber='MC54321', engineDisplacement=750}"
         return "";
     }

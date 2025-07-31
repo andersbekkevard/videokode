@@ -241,11 +241,11 @@ public class StudentGradeManager {
     }
 
     /**
-     * Returns a List of student names sorted by their grade in descending order.
+     * Returns a Queue of student names sorted by their grade in descending order.
      *
-     * @return a sorted List of student names by grade (descending)
+     * @return a sorted Queue of student names by grade (descending)
      */
-    public List<String> getStudentsByGradeDescending() {
+    public java.util.Queue<String> getStudentsByGradeDescending() {
         // TODO Implement the method getStudentsByGradeDescending
         return null;
     }
@@ -255,7 +255,7 @@ public class StudentGradeManager {
      *
      * @return a Map where keys are letter grades and values are the count of students with that grade
      */
-    public java.util.Map<Character, Integer> getGradeDistribution() {
+    public java.util.Map<Character, java.util.List<String>> getGradeDistribution() {
         // TODO Implement the method getGradeDistribution
         return null;
     }
@@ -275,7 +275,7 @@ public class StudentGradeManager {
      * @param studentName the name of the student
      * @return the last update date, or null if never updated
      */
-    public java.util.Date getLastGradeUpdateDate(String studentName) {
+    public java.time.LocalDate getLastGradeUpdateDate(String studentName) {
         // TODO Implement the method getLastGradeUpdateDate
         return null;
     }

@@ -1,10 +1,12 @@
-package p4_relasjoner.inheritance_v2;
+package p4_relasjoner.avsluttende_v4;
 
 /**
- * Represents a generic vehicle. This class serves as the base class for specific
+ * Represents a generic vehicle. This class serves as the base class for
+ * specific
  * types of vehicles.
  *
- * This exercise tests knowledge from p4_relasjoner, specifically s2_arv (inheritance).
+ * This exercise tests knowledge from p4_relasjoner, specifically s2_arv
+ * (inheritance).
  *
  * This class should be abstract, meaning it cannot be instantiated directly.
  * It provides common attributes and methods that all vehicles share.

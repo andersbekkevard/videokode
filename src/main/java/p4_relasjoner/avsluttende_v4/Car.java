@@ -1,4 +1,4 @@
-package p4_relasjoner.inheritance_v2;
+package p4_relasjoner.avsluttende_v4;
 
 /**
  * Represents a car, which is a specific type of Vehicle.
@@ -10,7 +10,7 @@ public class Car extends Vehicle {
      * Constructs a new Car with the given registration number and number of doors.
      *
      * @param registrationNumber The registration number of the car.
-     * @param numDoors The number of doors the car has.
+     * @param numDoors           The number of doors the car has.
      */
     public Car(String registrationNumber, int numDoors) {
         // TODO: Implement the constructor.

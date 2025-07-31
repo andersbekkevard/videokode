@@ -1,4 +1,4 @@
-package p4_relasjoner.inheritance_v2;
+package p4_relasjoner.avsluttende_v4;
 
 /**
  * Represents a truck, which is a specific type of Vehicle.
@@ -10,7 +10,7 @@ public class Truck extends Vehicle {
      * Constructs a new Truck with the given registration number and cargo capacity.
      *
      * @param registrationNumber The registration number of the truck.
-     * @param cargoCapacity The cargo capacity in kilograms.
+     * @param cargoCapacity      The cargo capacity in kilograms.
      */
     public Truck(String registrationNumber, double cargoCapacity) {
         // TODO: Implement the constructor.
