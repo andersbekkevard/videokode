@@ -1,6 +1,7 @@
 package p3_mer_om_java.avsluttende;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -241,21 +242,12 @@ public class StudentGradeManager {
     }
 
     /**
-     * Returns a Queue of student names sorted by their grade in descending order.
-     *
-     * @return a sorted Queue of student names by grade (descending)
-     */
-    public java.util.Queue<String> getStudentsByGradeDescending() {
-        // TODO Implement the method getStudentsByGradeDescending
-        return null;
-    }
-
-    /**
      * Returns a Map showing the distribution of letter grades (A, B, C, D, F).
      *
-     * @return a Map where keys are letter grades and values are the count of students with that grade
+     * @return a Map where keys are letter grades and values are the count of
+     *         students with that grade
      */
-    public java.util.Map<Character, java.util.List<String>> getGradeDistribution() {
+    public Map<Character, List<String>> getGradeDistribution() {
         // TODO Implement the method getGradeDistribution
         return null;
     }
@@ -267,17 +259,6 @@ public class StudentGradeManager {
      */
     public void recordGradeUpdateDate(String studentName) {
         // TODO Implement the method recordGradeUpdateDate
-    }
-
-    /**
-     * Returns the last date a student's grade was updated.
-     *
-     * @param studentName the name of the student
-     * @return the last update date, or null if never updated
-     */
-    public java.time.LocalDate getLastGradeUpdateDate(String studentName) {
-        // TODO Implement the method getLastGradeUpdateDate
-        return null;
     }
 
     /**

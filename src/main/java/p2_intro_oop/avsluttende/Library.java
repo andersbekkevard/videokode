@@ -56,7 +56,7 @@ public class Library {
 
     /**
      * Constructs a Library object with the specified name and a default capacity of
-     * 100 books.
+     * 20 books.
      * This demonstrates constructor overloading.
      *
      * @param libraryName the name of the library, must not be null or blank
@@ -98,7 +98,8 @@ public class Library {
 
     /**
      * Returns an array containing all Book objects currently in the library.
-     * The returned array should be a defensive copy to prevent external modification.
+     * The returned array should be a defensive copy to prevent external
+     * modification.
      *
      * @return an array of Book objects
      */
