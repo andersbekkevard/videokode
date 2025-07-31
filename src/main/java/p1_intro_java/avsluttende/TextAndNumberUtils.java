@@ -1,7 +1,8 @@
 package p1_intro_java.avsluttende;
 
 /**
- * Implement a utility class with static methods for text and number analysis called TextAndNumberUtils
+ * Implement a utility class with static methods for text and number analysis
+ * called TextAndNumberUtils
  * 
  * The expected methods for this class and their behaviour is detailed
  * in the below JavaDoc
@@ -10,14 +11,17 @@ package p1_intro_java.avsluttende;
  * 
  * This exercise tests knowledge from p1_intro_java:
  * - Primitive data types (int, boolean, double, char)
- * - String operations (length, charAt, indexOf, toUpperCase, toLowerCase, equals, replace)
+ * - String operations (length, charAt, indexOf, toUpperCase, toLowerCase,
+ * equals, replace)
  * - Arrays (creation, access, length)
  * - Loops (for, for-each, while, if-else)
  * - Static methods (parameters, return values, method overloading)
  * - Basic operators (+, -, *, /, %, ==, !=, &&, ||, !)
  * 
- * This class is purely static - no objects are created, only static methods are used.
- * This demonstrates functional programming concepts using Java's static methods.
+ * This class is purely static - no objects are created, only static methods are
+ * used.
+ * This demonstrates functional programming concepts using Java's static
+ * methods.
  * 
  * @see TextAndNumberUtilsTests
  */
@@ -90,29 +94,6 @@ public class TextAndNumberUtils {
     }
 
     /**
-     * Checks if a given number is prime.
-     * A prime number is greater than 1 and has no positive divisors other than 1 and itself.
-     *
-     * @param number the number to check
-     * @return true if the number is prime, false otherwise
-     */
-    public static boolean isPrime(int number) {
-        // TODO Implement the static method isPrime
-        return false;
-    }
-
-    /**
-     * Counts how many prime numbers are in the given array.
-     *
-     * @param numbers the array of integers
-     * @return the count of prime numbers, or 0 if array is null
-     */
-    public static int countPrimeNumbers(int[] numbers) {
-        // TODO Implement the static method countPrimeNumbers
-        return 0;
-    }
-
-    /**
      * Reverses the order of elements in the array and returns a new array.
      * The original array should not be modified.
      *
@@ -125,10 +106,12 @@ public class TextAndNumberUtils {
     }
 
     /**
-     * Creates a new array containing only the positive numbers from the input array.
+     * Creates a new array containing only the positive numbers from the input
+     * array.
      *
      * @param numbers the array of integers
-     * @return a new array containing only positive numbers, or empty array if none found
+     * @return a new array containing only positive numbers, or empty array if none
+     *         found
      */
     public static int[] getPositiveNumbers(int[] numbers) {
         // TODO Implement the static method getPositiveNumbers
@@ -173,11 +156,13 @@ public class TextAndNumberUtils {
     }
 
     /**
-     * Counts how many strings start with the specified character (case-insensitive).
+     * Counts how many strings start with the specified character
+     * (case-insensitive).
      *
-     * @param texts the array of strings
+     * @param texts     the array of strings
      * @param startChar the character to search for
-     * @return the count of strings starting with the character, or 0 if array is null
+     * @return the count of strings starting with the character, or 0 if array is
+     *         null
      */
     public static int countStringsStartingWith(String[] texts, char startChar) {
         // TODO Implement the static method countStringsStartingWith
@@ -187,7 +172,7 @@ public class TextAndNumberUtils {
     /**
      * Counts how many strings contain the specified substring (case-insensitive).
      *
-     * @param texts the array of strings
+     * @param texts     the array of strings
      * @param substring the substring to search for
      * @return the count of strings containing the substring, or 0 if array is null
      */
@@ -255,7 +240,8 @@ public class TextAndNumberUtils {
     // --- COMBINED UTILITY METHODS ---
 
     /**
-     * Counts how many vowels (a, e, i, o, u) are in the given string (case-insensitive).
+     * Counts how many vowels (a, e, i, o, u) are in the given string
+     * (case-insensitive).
      *
      * @param text the string to analyze
      * @return the count of vowels, or 0 if string is null
@@ -279,7 +265,7 @@ public class TextAndNumberUtils {
     /**
      * Replaces all occurrences of oldChar with newChar in all strings in the array.
      *
-     * @param texts the array of strings
+     * @param texts   the array of strings
      * @param oldChar the character to replace
      * @param newChar the character to replace with
      * @return a new array with characters replaced, or null if input is null
@@ -290,8 +276,10 @@ public class TextAndNumberUtils {
     }
 
     /**
-     * Creates a frequency array showing how many times each number appears in the input array.
-     * Only works for numbers 0-9. Returns an array of size 10 where index i contains
+     * Creates a frequency array showing how many times each number appears in the
+     * input array.
+     * Only works for numbers 0-9. Returns an array of size 10 where index i
+     * contains
      * the count of how many times number i appears in the input.
      *
      * @param numbers the array of integers (should contain only 0-9)
@@ -303,7 +291,8 @@ public class TextAndNumberUtils {
     }
 
     /**
-     * Checks if two integer arrays contain the same elements (order doesn't matter).
+     * Checks if two integer arrays contain the same elements (order doesn't
+     * matter).
      *
      * @param array1 the first array
      * @param array2 the second array
@@ -315,7 +304,8 @@ public class TextAndNumberUtils {
     }
 
     /**
-     * Method overloading demonstration: checks if two string arrays contain the same elements.
+     * Method overloading demonstration: checks if two string arrays contain the
+     * same elements.
      *
      * @param array1 the first array
      * @param array2 the second array
@@ -327,11 +317,13 @@ public class TextAndNumberUtils {
     }
 
     /**
-     * Concatenates all strings in the array into a single string, separated by the delimiter.
+     * Concatenates all strings in the array into a single string, separated by the
+     * delimiter.
      *
-     * @param texts the array of strings
+     * @param texts     the array of strings
      * @param delimiter the separator to use between strings
-     * @return a single concatenated string, or empty string if array is null or empty
+     * @return a single concatenated string, or empty string if array is null or
+     *         empty
      */
     public static String joinStrings(String[] texts, String delimiter) {
         // TODO Implement the static method joinStrings

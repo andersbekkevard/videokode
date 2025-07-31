@@ -9,36 +9,6 @@ import java.util.Set;
  * The expected methods for this class and their behaviour is detailed
  * in the below JavaDoc
  * 
- * This exercise tests knowledge from p1_intro_java, p2_intro_oop AND
- * p3_mer_om_java:
- * 
- * From p1_intro_java:
- * - Primitive data types (int, boolean, double, char)
- * - String operations (length, charAt, indexOf, toUpperCase, toLowerCase,
- * equals, replace)
- * - Arrays (creation, access, length)
- * - Loops (for, for-each, while, if-else)
- * - Methods (parameters, return values, method overloading)
- * - Basic operators (+, -, *, /, %, ==, !=, &&, ||, !)
- * 
- * From p2_intro_oop:
- * - Classes and objects
- * - Constructors (with parameters, constructor overloading)
- * - Instance fields and methods
- * - Encapsulation (private fields, public methods)
- * - Input validation in constructors and setters
- * - Exception throwing (IllegalArgumentException, IllegalStateException)
- * - Static fields and methods
- * - The 'this' keyword
- * - toString() method overriding
- * 
- * From p3_mer_om_java:
- * - Collections (List, Map, Set, Queue)
- * - Wrapper classes (Integer, Double, Character, Boolean)
- * - Wrapper class methods (parseInt, parseDouble, isDigit, etc.)
- * - Object comparison (== vs equals)
- * - StringBuilder for efficient string building
- * - LocalDate for date handling
  * 
  * @see StudentGradeManagerTests
  */

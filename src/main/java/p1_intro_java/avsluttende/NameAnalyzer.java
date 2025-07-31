@@ -6,18 +6,6 @@ package p1_intro_java.avsluttende;
  * The expected methods for this class and their behaviour is detailed
  * in the below JavaDoc
  * 
- * The NameAnalyzer class must be in the package p1_intro_java.avsluttende
- * 
- * The NameAnalyzer class should NOT implement any interfaces.
- * 
- * This exercise tests knowledge from p1_intro_java:
- * - Primitive data types (int, boolean, double)
- * - String operations (length, charAt, indexOf, toUpperCase, toLowerCase,
- * equals, replace)
- * - Arrays (creation, access, length)
- * - Loops (for, for-each, while, if-else)
- * - Methods (parameters, return values, method overloading)
- * - Basic operators (+, -, *, /, %, ==, !=, &&, ||, !)
  * 
  * @see NameAnalyzerTests
  */

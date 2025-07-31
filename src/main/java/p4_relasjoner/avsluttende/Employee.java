@@ -1,14 +1,8 @@
 package p4_relasjoner.avsluttende;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Queue;
-import java.util.PriorityQueue;
 import java.util.Set;
 
 /**
@@ -21,11 +15,13 @@ import java.util.Set;
  * 
  * The Employee class should NOT implement any interfaces.
  * 
- * This exercise tests knowledge from p1_intro_java, p2_intro_oop, p3_mer_om_java AND p4_relasjoner:
+ * This exercise tests knowledge from p1_intro_java, p2_intro_oop,
+ * p3_mer_om_java AND p4_relasjoner:
  * 
  * From p1_intro_java:
  * - Primitive data types (int, boolean, double, char)
- * - String operations (length, charAt, indexOf, toUpperCase, toLowerCase, equals, replace)
+ * - String operations (length, charAt, indexOf, toUpperCase, toLowerCase,
+ * equals, replace)
  * - Arrays (creation, access, length)
  * - Loops (for, for-each, while, if-else)
  * - Methods (parameters, return values, method overloading)
@@ -64,16 +60,17 @@ import java.util.Set;
 public class Employee {
 
     // TODO Add any necessary private instance fields here
-    
+
     // TODO Add any necessary static fields here
 
     /**
      * Constructs an Employee with the specified name, employee ID, and salary.
      *
-     * @param name the name of the employee, must not be null or blank
+     * @param name       the name of the employee, must not be null or blank
      * @param employeeId the unique employee ID, must be a positive integer
-     * @param salary the employee's salary, must be non-negative
-     * @throws IllegalArgumentException if name is null or blank, or if employeeId is not positive, or if salary is negative
+     * @param salary     the employee's salary, must be non-negative
+     * @throws IllegalArgumentException if name is null or blank, or if employeeId
+     *                                  is not positive, or if salary is negative
      */
     public Employee(String name, int employeeId, double salary) {
         // TODO Implement the constructor
@@ -134,7 +131,8 @@ public class Employee {
      * Sets the employee's manager (one-to-one association).
      * This should maintain bidirectional consistency.
      * If the employee already has a manager, the old relationship should be broken.
-     * If the new manager is not null, this employee should be added as a subordinate.
+     * If the new manager is not null, this employee should be added as a
+     * subordinate.
      *
      * @param newManager the new manager, can be null to remove current manager
      */
@@ -143,7 +141,8 @@ public class Employee {
     }
 
     /**
-     * Returns a collection of all employees that report to this employee (one-to-many association).
+     * Returns a collection of all employees that report to this employee
+     * (one-to-many association).
      * This employee is the manager of these subordinates.
      *
      * @return a collection of subordinate employees
@@ -162,7 +161,8 @@ public class Employee {
      * @throws IllegalArgumentException if subordinate is null
      */
     public void addSubordinate(Employee subordinate) {
-        // TODO Implement the method addSubordinate with proper bidirectional consistency
+        // TODO Implement the method addSubordinate with proper bidirectional
+        // consistency
     }
 
     /**
@@ -171,15 +171,18 @@ public class Employee {
      * The subordinate's manager should be set to null.
      *
      * @param subordinate the employee to remove as a subordinate
-     * @return true if the subordinate was removed, false if they were not a subordinate
+     * @return true if the subordinate was removed, false if they were not a
+     *         subordinate
      */
     public boolean removeSubordinate(Employee subordinate) {
-        // TODO Implement the method removeSubordinate with proper bidirectional consistency
+        // TODO Implement the method removeSubordinate with proper bidirectional
+        // consistency
         return false;
     }
 
     /**
-     * Returns a collection of all projects this employee is working on (many-to-many association).
+     * Returns a collection of all projects this employee is working on
+     * (many-to-many association).
      *
      * @return a collection of projects
      */
@@ -206,7 +209,8 @@ public class Employee {
      * The employee should be removed from the project's employee list.
      *
      * @param project the project to leave
-     * @return true if the employee was removed from the project, false if they were not on the project
+     * @return true if the employee was removed from the project, false if they were
+     *         not on the project
      */
     public boolean leaveProject(Project project) {
         // TODO Implement the method leaveProject with proper bidirectional consistency
@@ -244,7 +248,8 @@ public class Employee {
     }
 
     /**
-     * Calculates the total salary cost for this employee and all their subordinates (recursively).
+     * Calculates the total salary cost for this employee and all their subordinates
+     * (recursively).
      * This demonstrates recursive traversal of hierarchical associations.
      *
      * @return the total salary cost including this employee and all subordinates
@@ -255,8 +260,10 @@ public class Employee {
     }
 
     /**
-     * Returns a list of all employees in this employee's management hierarchy (including themselves).
-     * This should include this employee, all their subordinates, subordinates of subordinates, etc.
+     * Returns a list of all employees in this employee's management hierarchy
+     * (including themselves).
+     * This should include this employee, all their subordinates, subordinates of
+     * subordinates, etc.
      * This demonstrates recursive traversal of hierarchical associations.
      *
      * @return a list of all employees in the hierarchy
@@ -301,7 +308,8 @@ public class Employee {
     }
 
     /**
-     * Returns a map where keys are management levels and values are lists of employee names at that level.
+     * Returns a map where keys are management levels and values are lists of
+     * employee names at that level.
      * This demonstrates recursive hierarchy traversal and collections.
      *
      * @return a map of management levels to employee names
@@ -317,14 +325,15 @@ public class Employee {
      * Each level should be indented with two spaces per level.
      * Example:
      * "John Doe (ID: 1, Salary: 100000.0)
-     *   Jane Smith (ID: 2, Salary: 80000.0)
-     *     Bob Johnson (ID: 3, Salary: 60000.0)
-     *   Mike Wilson (ID: 4, Salary: 75000.0)"
+     * Jane Smith (ID: 2, Salary: 80000.0)
+     * Bob Johnson (ID: 3, Salary: 60000.0)
+     * Mike Wilson (ID: 4, Salary: 75000.0)"
      *
      * @return a formatted organizational chart
      */
     public String generateOrganizationalChart() {
-        // TODO Implement the method generateOrganizationalChart using StringBuilder and recursion
+        // TODO Implement the method generateOrganizationalChart using StringBuilder and
+        // recursion
         return null;
     }
 
