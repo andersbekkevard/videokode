@@ -5,25 +5,10 @@
 - [X] Forberede kameraopptak
 
 - [ ] Eksamensoppg
-- Intro Java (Datatyper, String, løkker, metoder)
-
-
-- Konstruktører, innkapsling, static, validering og unntak
-
-
-- Collections, Dato og Tid, Sb og toString, sammenligninger, ternary, Testing/Debugging
-
-
-- Arv
-
-
-- Abstrakte klasser / Interfacer
-
-
-- Comparator, Optionals, Streams
-
-
-- Observatør Observert
+- [ ] Intro Java (Datatyper, String, løkker, metoder)
+- [ ] Konstruktører, innkapsling, static, validering og unntak
+- [ ] (?) Collections, Dato og Tid, Sb og toString, sammenligninger, ternary, Testing/Debugging
+- [ ] Arv og Abstrakte klasser / Interfacer
 
 
 - [X] Filme Videoer
