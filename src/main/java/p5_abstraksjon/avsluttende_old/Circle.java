@@ -1,4 +1,4 @@
-package p5_abstraksjon.avsluttende;
+package p5_abstraksjon.avsluttende_old;
 
 /**
  * Implement a concrete class representing a circle called Circle
@@ -33,14 +33,16 @@ public class Circle extends Shape implements Drawable {
     // Hint: A circle needs a radius and coordinates for drawing
 
     /**
-     * Constructs a Circle with the specified name, color, radius, and drawing position.
+     * Constructs a Circle with the specified name, color, radius, and drawing
+     * position.
      *
-     * @param name the name of the circle, must not be null or blank
-     * @param color the color of the circle, must not be null or blank  
+     * @param name   the name of the circle, must not be null or blank
+     * @param color  the color of the circle, must not be null or blank
      * @param radius the radius of the circle, must be positive
-     * @param x the x-coordinate for drawing
-     * @param y the y-coordinate for drawing
-     * @throws IllegalArgumentException if name or color is null/blank, or if radius is not positive
+     * @param x      the x-coordinate for drawing
+     * @param y      the y-coordinate for drawing
+     * @throws IllegalArgumentException if name or color is null/blank, or if radius
+     *                                  is not positive
      */
     public Circle(String name, String color, double radius, double x, double y) {
         super(name, color);
@@ -197,7 +199,8 @@ public class Circle extends Shape implements Drawable {
      */
     @Override
     public String prepareForDrawing() {
-        // TODO Optionally implement custom prepareForDrawing, or remove this method to use default
+        // TODO Optionally implement custom prepareForDrawing, or remove this method to
+        // use default
         return "Preparing to draw circle with radius " + getRadius() + "...";
     }
 }

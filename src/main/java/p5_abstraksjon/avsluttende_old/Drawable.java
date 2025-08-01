@@ -1,11 +1,12 @@
-package p5_abstraksjon.avsluttende;
+package p5_abstraksjon.avsluttende_old;
 
 /**
  * Interface representing objects that can be drawn.
  * 
  * This interface demonstrates the key concepts from p5_abstraksjon:
  * - Interfaces with abstract methods (implicitly public and abstract)
- * - Default methods in interfaces (concrete methods with default implementation)
+ * - Default methods in interfaces (concrete methods with default
+ * implementation)
  * - Static methods in interfaces
  * - Multiple inheritance through interfaces
  * 
@@ -67,7 +68,8 @@ public interface Drawable {
 
     /**
      * Default method that performs the complete drawing process.
-     * This demonstrates the template method pattern in interfaces using default methods.
+     * This demonstrates the template method pattern in interfaces using default
+     * methods.
      * It calls the abstract methods that must be implemented by concrete classes.
      *
      * @return a complete drawing report
@@ -81,7 +83,8 @@ public interface Drawable {
     /**
      * Static method that validates drawing coordinates.
      * This demonstrates static methods in interfaces.
-     * Static methods in interfaces belong to the interface, not to implementing classes.
+     * Static methods in interfaces belong to the interface, not to implementing
+     * classes.
      *
      * @param coordinates the coordinates string to validate (format: "(x, y)")
      * @return true if coordinates are in valid format, false otherwise

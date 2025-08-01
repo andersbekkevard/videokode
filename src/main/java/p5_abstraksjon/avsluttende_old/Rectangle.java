@@ -1,4 +1,4 @@
-package p5_abstraksjon.avsluttende;
+package p5_abstraksjon.avsluttende_old;
 
 /**
  * Implement a concrete class representing a rectangle called Rectangle
@@ -21,7 +21,8 @@ package p5_abstraksjon.avsluttende;
  * - Implement the Drawable interface
  * - Override all abstract methods from Shape
  * - Implement all abstract methods from Drawable
- * - Use the default methods from Drawable (no need to override unless custom behavior needed)
+ * - Use the default methods from Drawable (no need to override unless custom
+ * behavior needed)
  * 
  * @see Shape
  * @see Drawable
@@ -33,15 +34,17 @@ public class Rectangle extends Shape implements Drawable {
     // Hint: A rectangle needs width, height, and coordinates for drawing
 
     /**
-     * Constructs a Rectangle with the specified name, color, dimensions, and drawing position.
+     * Constructs a Rectangle with the specified name, color, dimensions, and
+     * drawing position.
      *
-     * @param name the name of the rectangle, must not be null or blank
-     * @param color the color of the rectangle, must not be null or blank
-     * @param width the width of the rectangle, must be positive
+     * @param name   the name of the rectangle, must not be null or blank
+     * @param color  the color of the rectangle, must not be null or blank
+     * @param width  the width of the rectangle, must be positive
      * @param height the height of the rectangle, must be positive
-     * @param x the x-coordinate for drawing
-     * @param y the y-coordinate for drawing
-     * @throws IllegalArgumentException if name or color is null/blank, or if width or height is not positive
+     * @param x      the x-coordinate for drawing
+     * @param y      the y-coordinate for drawing
+     * @throws IllegalArgumentException if name or color is null/blank, or if width
+     *                                  or height is not positive
      */
     public Rectangle(String name, String color, double width, double height, double x, double y) {
         super(name, color);
@@ -125,7 +128,8 @@ public class Rectangle extends Shape implements Drawable {
      * @return true if the rectangle is a square, false otherwise
      */
     public boolean isSquare() {
-        // TODO Implement the method isSquare with tolerance for floating-point comparison
+        // TODO Implement the method isSquare with tolerance for floating-point
+        // comparison
         return false;
     }
 
@@ -204,7 +208,8 @@ public class Rectangle extends Shape implements Drawable {
     @Override
     public void draw() {
         // TODO Implement the method draw
-        // Print something like: "Drawing Blue Rectangle with width 4.0 and height 3.0 at (5.0, 10.0)"
+        // Print something like: "Drawing Blue Rectangle with width 4.0 and height 3.0
+        // at (5.0, 10.0)"
     }
 
     /**

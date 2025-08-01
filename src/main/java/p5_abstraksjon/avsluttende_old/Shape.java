@@ -1,4 +1,4 @@
-package p5_abstraksjon.avsluttende;
+package p5_abstraksjon.avsluttende_old;
 
 /**
  * Abstract base class representing a geometric shape.
@@ -15,7 +15,8 @@ package p5_abstraksjon.avsluttende;
  * - Template method pattern (concrete methods calling abstract methods)
  * - Polymorphism through abstract classes
  * 
- * Students should implement concrete subclasses that extend this abstract class.
+ * Students should implement concrete subclasses that extend this abstract
+ * class.
  * 
  * @see Circle
  * @see Rectangle
@@ -30,7 +31,7 @@ public abstract class Shape {
     /**
      * Constructs a Shape with the specified name and color.
      *
-     * @param name the name of the shape, must not be null or blank
+     * @param name  the name of the shape, must not be null or blank
      * @param color the color of the shape, must not be null or blank
      * @throws IllegalArgumentException if name or color is null or blank
      */
@@ -87,7 +88,8 @@ public abstract class Shape {
     /**
      * Abstract method to get a description of the shape's specific properties.
      * Each concrete subclass must implement this method.
-     * For example: "Circle with radius 5.0" or "Rectangle with width 4.0 and height 3.0"
+     * For example: "Circle with radius 5.0" or "Rectangle with width 4.0 and height
+     * 3.0"
      *
      * @return a description of the shape's properties
      */
@@ -104,13 +106,15 @@ public abstract class Shape {
      * @return a complete description of the shape
      */
     public String getFullDescription() {
-        // TODO Implement the method getFullDescription using the template method pattern
+        // TODO Implement the method getFullDescription using the template method
+        // pattern
         // Use String.format() for proper decimal formatting (2 decimal places)
         return null;
     }
 
     /**
-     * Concrete method that checks if this shape has a larger area than another shape.
+     * Concrete method that checks if this shape has a larger area than another
+     * shape.
      * This demonstrates how concrete methods in abstract classes can provide
      * useful functionality using abstract methods.
      *
@@ -132,7 +136,8 @@ public abstract class Shape {
      * @throws IllegalArgumentException if other is null
      */
     public boolean hasSameAreaAs(Shape other) {
-        // TODO Implement the method hasSameAreaAs with tolerance for floating-point comparison
+        // TODO Implement the method hasSameAreaAs with tolerance for floating-point
+        // comparison
         return false;
     }
 
@@ -141,7 +146,8 @@ public abstract class Shape {
      * This demonstrates how concrete methods can combine abstract methods.
      *
      * @return the ratio of area to perimeter
-     * @throws IllegalStateException if perimeter is zero (to avoid division by zero)
+     * @throws IllegalStateException if perimeter is zero (to avoid division by
+     *                               zero)
      */
     public double getAreaToPerimeterRatio() {
         // TODO Implement the method getAreaToPerimeterRatio
@@ -149,7 +155,8 @@ public abstract class Shape {
     }
 
     /**
-     * Concrete method that checks if the shape is "compact" (area-to-perimeter ratio > 1.0).
+     * Concrete method that checks if the shape is "compact" (area-to-perimeter
+     * ratio > 1.0).
      * This demonstrates concrete methods building on other methods.
      *
      * @return true if the shape is compact, false otherwise
@@ -162,7 +169,8 @@ public abstract class Shape {
     /**
      * Abstract method to scale the shape by a factor.
      * Each concrete subclass must implement this method to resize appropriately.
-     * For example, a circle would scale its radius, a rectangle would scale width and height.
+     * For example, a circle would scale its radius, a rectangle would scale width
+     * and height.
      *
      * @param scaleFactor the factor to scale by, must be positive
      * @throws IllegalArgumentException if scaleFactor is not positive
