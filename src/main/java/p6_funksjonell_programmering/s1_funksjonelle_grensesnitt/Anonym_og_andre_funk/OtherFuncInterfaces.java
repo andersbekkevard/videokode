@@ -11,6 +11,8 @@ import java.util.function.UnaryOperator;
 public class OtherFuncInterfaces {
     
     public static <T> void main(String[] args) {
+
+        // Vi er da inni kode hvor vi har forskjellige 
         
         // Consumer<T>: tar inn en verdi uten å returnere noe. "Forbruker" innverdien
         Consumer<String> gamerTagGenerator = new Consumer<String>() {

@@ -1,6 +1,7 @@
 package p6_funksjonell_programmering.s4_streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class ComparatorTasks {
@@ -65,8 +66,7 @@ public class ComparatorTasks {
 	 * @return the person with the highest age
 	 */
 	public static Person task4(List<Person> people) {
-		// TODO: Implement this method
-		return null;
+		
 	}
 
 	/**
@@ -184,8 +184,13 @@ public class ComparatorTasks {
 	 * @return a new sorted list ordered by size, average salary, then name
 	 */
 	public static List<Department> task10(List<Department> departments) {
-		// TODO: Implement this method
-		return null;
+		return departments.stream()
+		.sorted((a,b) -> (int) a.getName().charAt(0) - (int) b.getName().charAt(0))
+		.sorted((a,b) -> 
+			(int) a.getEmployees().stream().mapToDouble(Employee::getSalary).sum() - 
+			(int) b.getEmployees().stream().mapToDouble(Employee::getSalary).sum())
+		.sorted((a,b) -> a.getEmployees().size() - b.getEmployees().size()).toList();
+
 	}
 
 	// region Test methods
@@ -452,6 +457,6 @@ public class ComparatorTasks {
 		// testTask7();
 		// testTask8();
 		// testTask9();
-		// testTask10();
+		testTask10();
 	}
 }

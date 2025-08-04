@@ -187,9 +187,9 @@ public class ComparatorTasksSolved {
 	 */
 	public static List<Department> task10(List<Department> departments) {
 		return departments.stream()
-				.sorted(Comparator.comparing((Department d) -> d.getEmployees().size())
-						.thenComparing((Department d) -> d.getEmployees().stream().mapToDouble(Employee::getSalary)
-								.average().orElse(0))
+				.sorted(
+					Comparator.comparing((Department d) -> d.getEmployees().size())
+						.thenComparing((Department d) -> d.getEmployees().stream().mapToDouble(Employee::getSalary).average().orElse(0))
 						.thenComparing(Department::getName))
 				.toList();
 	}
