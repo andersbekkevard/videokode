@@ -1,4 +1,4 @@
-package p2_into_oop;
+package p2_intro_oop;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

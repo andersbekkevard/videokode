@@ -26,8 +26,8 @@ public class ListsInJava {
 
     private List<Integer> diceRolls = new ArrayList<>();
 
-    private List<Integer> predefinedDiceRolls = new ArrayList<>(Arrays.asList(4,6,5,3,2));
-    private List<Integer> predefinedDiceRolls2 = new ArrayList<>(List.of(4,6,5,3,2));
+    private List<Integer> predefinedDiceRolls = new ArrayList<>(Arrays.asList(4, 6, 5, 3, 2));
+    private List<Integer> predefinedDiceRolls2 = new ArrayList<>(List.of(4, 6, 5, 3, 2));
 
     public void addRoll(int n) {
         if (n >= 1 && n <= 6) {
@@ -54,7 +54,7 @@ public class ListsInJava {
     }
 
     public boolean containsSix() {
-        return this.predefinedDiceRolls.contains(6); 
+        return this.predefinedDiceRolls.contains(6);
     }
 
     public static void main(String[] args) {
@@ -69,13 +69,12 @@ public class ListsInJava {
         System.out.println(l.diceRolls);
 
         List<Integer> updatingList = l.getUpdatingDiceRolls();
-        l.addRoll(3); 
+        l.addRoll(3);
         System.out.println(updatingList); // Fortsetter å se oppdatering etter du fikk innsyn
 
         List<Integer> snapshotList = l.getSnapshotDiceRolls();
         l.addRoll(1);
         System.out.println(snapshotList); // Innsyn begrenset til tidspunktet du fikk tilgang
-
 
         l.printPredefinedDiceRolls();
 
@@ -84,8 +83,6 @@ public class ListsInJava {
         l.predefinedDiceRolls.remove(Integer.valueOf(6));
         System.out.println(l.containsSix());
         // getFirst, getLast, clear, isEmpty, indexOf ...
-
-
 
     }
 

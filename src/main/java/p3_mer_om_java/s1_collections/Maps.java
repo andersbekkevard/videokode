@@ -28,7 +28,7 @@ public class Maps {
 		// Siden keys må være unike overskriver dette valuen som stod fra før
 		grades.put("Anne", 'C');
 
-		// INNEHOLDER IKKE ANNE A OG ANNE C  BARE SISTE OPPFØRING
+		// INNEHOLDER IKKE ANNE A OG ANNE C BARE SISTE OPPFØRING
 
 		if (grades.containsValue('F')) {
 			System.out.println("Noen har fått F");
@@ -44,12 +44,11 @@ public class Maps {
 			System.out.println(s);
 		}
 
-		
 		System.out.println("\nRegistrerte karakterer:");
 		for (Character c : grades.values()) {
 			System.out.println(c);
 		}
-		
+
 		grades.remove("Bjørg");
 
 		System.out.println("\nUtskrift:");
@@ -70,4 +69,61 @@ public class Maps {
 		System.out.println(leaderboardTracker.get("Otto"));
 		System.out.println(leaderboardTracker.get("Anna"));
 	}
+}
+
+public class Maps {
+
+	public static void main(String[] args) {
+
+		// Map<T, S> varName = new HashMap<>();
+		Map<String, Character> grades = new HashMap<>();
+		// karakterer {(n1, k1), (n2, k2), (n3, k3) ... }
+
+		grades.put("Anne", 'A');
+		grades.put("Bjørg", 'B');
+		// System.out.println(grades);
+
+		if (grades.containsKey("Anne")) {
+			// System.out.println("Anne er registrert");
+		}
+
+		grades.put("Anne", 'C');
+		// System.out.println(grades);
+
+		if (grades.containsValue('F')) {
+			// System.out.println("Noen har fått F");
+		}
+
+		// System.out.println("Frode fikk " + grades.getOrDefault("Frode", 'F'));
+
+		// System.out.println("Registrerte navn:");
+		for (String s : grades.keySet()) {
+			// System.out.println(s);
+		}
+
+		// System.out.println("Registrerte karakterer:");
+		for (Character c : grades.values()) {
+			// System.out.println(c);
+		}
+
+		// System.out.println("Utskrift:");
+		for (Entry<String, Character> e : grades.entrySet()) {
+			// System.out.println(e.getKey() + ":" + e.getValue());
+		}
+
+		Map<String, List<Integer>> leaderboardTracker = new HashMap<>();
+		List<Integer> ottosPlacements = new ArrayList<>(Arrays.asList(2, 5, 7));
+		List<Integer> annasPlacements = new ArrayList<>();
+
+		leaderboardTracker.put("Otto", ottosPlacements);
+		leaderboardTracker.put("Anna", annasPlacements);
+
+		annasPlacements.add(1);
+		leaderboardTracker.get("Anna").add(10);
+
+		System.out.println(leaderboardTracker.get("Otto"));
+		System.out.println(leaderboardTracker.get("Anna"));
+
+	}
+
 }

@@ -30,10 +30,8 @@ public class BankCustomer {
 
     // Høyreklikk, source action, generate getters and setters, huk av
 
-    // public int getAge() {
-    //     String birthyear = uid.substring(4, 6);
-    //     int age = 25 - Integer.parseInt(birthyear);
-    //     return age;
+    //  public String getBirthYear() {
+    //     return uid.substring(4, 6);
     // }
 
 }

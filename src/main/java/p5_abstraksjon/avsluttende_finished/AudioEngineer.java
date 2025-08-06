@@ -75,3 +75,14 @@ public class AudioEngineer {
 				new Speaker("KRK Rokit 5")));
 	}
 }
+
+/**
+ * Rekkefølge
+ * 
+ * - AudioDevice
+ * - Speaker
+ * - Wireless -> Headset
+ * 
+ * - AudioEngineer
+ * 
+ */

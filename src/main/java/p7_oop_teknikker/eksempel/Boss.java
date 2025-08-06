@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Boss implements OrderListener {
-    
+
     private List<Worker> workers = new ArrayList<>();
     private int turn;
-    
+
     public void addWorker(Worker w) {
         if (!workers.contains(w)) {
             workers.add(w);
@@ -20,7 +20,8 @@ public class Boss implements OrderListener {
 
     public void updateTurn() {
         turn++;
-        if (turn == workers.size()) turn = 0;
+        if (turn >= workers.size())
+            turn = 0;
     }
 
     @Override

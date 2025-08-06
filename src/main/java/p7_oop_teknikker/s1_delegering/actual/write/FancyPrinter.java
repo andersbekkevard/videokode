@@ -3,12 +3,11 @@ package p7_oop_teknikker.s1_delegering.actual.write;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FancyPrinter implements IPrinter {
+public class FancyPrinter {
 
 	private static final int BOX_WIDTH = 60;
 	private static final int INNER_WIDTH = BOX_WIDTH - 2;
 
-	@Override
 	public void print(Document doc) {
 		topBorder();
 		centeredLine(doc.getTitle().toUpperCase());

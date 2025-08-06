@@ -3,30 +3,14 @@ package p2_intro_oop.avsluttende;
 /**
  * Implement a class that represents a library management system called Library
  * 
- * The expected methods for this class and their behaviour is detailed
- * in the below JavaDoc
+ * Library manages a fixed-size collection of Book objects.
+ * It lets you add or remove books (up to a max capacity), check if a book is
+ * present, list the stored books and their titles, search by title or author
+ * (case-insensitive), count simple matches, and get basic title stats (longest,
+ * shortest, average length). It also exposes the library name, capacity, and
+ * current count, reports full/empty, and returns a readable summary string.
+ *
  * 
- * This exercise tests knowledge from p1_intro_java AND p2_intro_oop:
- * 
- * From p1_intro_java:
- * - Primitive data types (int, boolean, double, char)
- * - String operations (length, charAt, indexOf, toUpperCase, toLowerCase,
- * equals, replace)
- * - Arrays (creation, access, length)
- * - Loops (for, for-each, while, if-else)
- * - Methods (parameters, return values, method overloading)
- * - Basic operators (+, -, *, /, %, ==, !=, &&, ||, !)
- * 
- * From p2_intro_oop:
- * - Classes and objects
- * - Constructors (with parameters, constructor overloading)
- * - Instance fields and methods
- * - Encapsulation (private fields, public methods)
- * - Input validation in constructors and setters
- * - Exception throwing (IllegalArgumentException, IllegalStateException)
- * - Static fields and methods
- * - The 'this' keyword
- * - Object composition (using Book objects)
  * 
  * This class uses the Book class to demonstrate proper object composition
  * and working with custom objects rather than just primitive types.
@@ -306,18 +290,5 @@ public class Library {
     public static boolean isValidLibraryName(String name) {
         // TODO Implement the static method isValidLibraryName
         return false;
-    }
-
-    /**
-     * Returns a string representation of the library in the format:
-     * "Library: [name] ([currentBooks]/[maxCapacity] books)"
-     * For example: "Library: City Library (15/100 books)"
-     *
-     * @return a string representation of the library
-     */
-    @Override
-    public String toString() {
-        // TODO Implement the toString method
-        return null;
     }
 }

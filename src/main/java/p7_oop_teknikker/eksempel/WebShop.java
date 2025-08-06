@@ -23,7 +23,8 @@ public class WebShop {
         if (item == null || item.isBlank() || amout <= 0) {
             throw new IllegalArgumentException("Ugyldig bestilling");
         }
-        if (!availableOrders.contains(item)) throw new IllegalArgumentException("Ikke i sortement");
+        if (!availableOrders.contains(item))
+            throw new IllegalArgumentException("Ikke i sortement");
 
         listeners.forEach(l -> l.orderPlaced(item, amout));
     }
