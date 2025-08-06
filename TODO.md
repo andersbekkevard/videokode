@@ -10,6 +10,11 @@
 - [ ] (?) Collections, Dato og Tid, Sb og toString, sammenligninger, ternary, Testing/Debugging
 - [ ] Arv og Abstrakte klasser / Interfacer
 
+- [ ] Er optionals-videoen fullført?
+- [ ] Er optionals-videoen fullført?
+
+
+
 
 - [X] Filme Videoer
   - [X] Static
