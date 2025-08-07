@@ -34,5 +34,9 @@ public class Time {
 		// 2. Lage en LocalDate som representerer i morgen (plusDays)
 		// ^Herunder forklare at immutable
 		// 3. Lage en LocalDateTime som er dagens dagens dato men i januar (withYear)
+
+        LocalDate date1 = LocalDate.now();
+        System.out.println(date1.getMonth().getValue());
+
 	}
 }

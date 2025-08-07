@@ -8,5 +8,10 @@ public class GTAVI {
     public void runGame() {
         System.out.println("Error. Your credit card number has been stolen");
     }
+
+    public static void main(String[] args) {
+        GTAVI game = new GTAVI();
+        game.runGame();
+    }
 }
 

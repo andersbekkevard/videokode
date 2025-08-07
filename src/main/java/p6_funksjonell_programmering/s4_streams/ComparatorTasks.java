@@ -66,7 +66,8 @@ public class ComparatorTasks {
 	 * @return the person with the highest age
 	 */
 	public static Person task4(List<Person> people) {
-		
+		// TODO: Implement this method
+		return null;
 	}
 
 	/**
@@ -184,13 +185,30 @@ public class ComparatorTasks {
 	 * @return a new sorted list ordered by size, average salary, then name
 	 */
 	public static List<Department> task10(List<Department> departments) {
-		return departments.stream()
-		.sorted((a,b) -> (int) a.getName().charAt(0) - (int) b.getName().charAt(0))
-		.sorted((a,b) -> 
-			(int) a.getEmployees().stream().mapToDouble(Employee::getSalary).sum() - 
-			(int) b.getEmployees().stream().mapToDouble(Employee::getSalary).sum())
-		.sorted((a,b) -> a.getEmployees().size() - b.getEmployees().size()).toList();
+		// Ikke best practice å bruke flere .sorted() etter hverandre,
+		// men for å gi en enklere forklaring for hvert steg kan man det.
+		// Sorterer vi først på de siste kriteriene vi skulle sortere på,
+		// forblir denne sorteringen når vi senere sorterer på "viktigere"
+		// kriterier.
 
+		// return departments.stream()
+		// .sorted(Comparator.comparing(Department::getName)) // sorterer på 
+		// .sorted(Comparator.comparingDouble(d -> d.getEmployees().stream()
+        //                                .mapToDouble(Employee::getSalary)
+        //                                .average()
+        //                                .orElse(0.0)))
+		// .sorted((a,b) -> a.getEmployees().size() - b.getEmployees().size())
+		// .toList();
+
+		return departments.stream()
+        .sorted(Comparator
+            .comparingInt((Department d) -> d.getEmployees().size())
+            .thenComparingDouble(d -> d.getEmployees().stream()
+                                       .mapToDouble(Employee::getSalary)
+                                       .average()
+                                       .orElse(0.0))
+            .thenComparing(Department::getName))
+        .toList();
 	}
 
 	// region Test methods
